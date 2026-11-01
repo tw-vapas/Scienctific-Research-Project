@@ -141,3 +141,31 @@ Agent khi hỗ trợ thành viên nào cần bám sát phân công công việc 
 1. **Bảo toàn dữ liệu gốc:** Tệp `data/raw/WDI_RAW_2015_2025.csv` là nguồn chân lý thô (ground truth). Tuyệt đối không xóa, không ghi đè trực tiếp lên tệp này. Mọi biến đổi dữ liệu phải được thực hiện qua mã script và lưu vào `data/processed/`.
 2. **Trung thực học thuật:** Không điều chỉnh dữ liệu để gượng ép hệ số hồi quy theo giả thuyết mong muốn. Nếu Định luật Okun hoặc Đường cong Phillips không có ý nghĩa thống kê hoặc ngược dấu kỳ vọng tại các nước LMICs, Agent phải hướng dẫn người dùng giải thích hiện tượng đó dựa trên cấu trúc kinh tế thực tế (ví dụ: thị trường phi chính thức hấp thụ lao động dư thừa, lạm phát đình trệ *stagflation* sau COVID-19).
 3. **Giữ gìn tài liệu gốc:** Không can thiệp, làm hỏng các tệp văn bản trong `Documents/` và `Archived Prompts/`.
+
+---
+
+## 6. Quy Tắc Commit Liên Tục & Quy Luật Đặt Tên Commit (Atomic & Continuous Commits)
+
+Để phục vụ quản lý dự án bài bản, theo dõi tiến độ chính xác và dễ dàng khôi phục phiên bản khi có sự cố, mọi Agent và thành viên bắt buộc tuân thủ:
+
+1. **Cam kết Commit liên tục theo từng bước chạy:**
+   - Sau mỗi lần chạy một script thành công và sinh ra sản phẩm (bộ dữ liệu mới, biểu đồ, bảng hồi quy), **BẮT BUỘC COMMIT NGAY LẬP TỨC**.
+   - Tuyệt đối không gộp nhiều bước chạy khác nhau (ví dụ: vừa làm sạch vừa chạy mô hình) vào cùng một commit lớn.
+
+2. **Quy luật đặt tên commit bắt buộc (Conventional Commit Format):**
+   ```
+   <type>(<scope>): <mô tả hành động cụ thể> | <kết quả/output tạo ra>
+   ```
+   - **`data(cleaning)`**: Chạy lọc mẫu, tiền xử lý, kiểm tra tính cân bằng $\rightarrow$ Xuất file dữ liệu sạch.
+     * *Ví dụ:* `data(cleaning): filter 88 balanced LMICs (2015-2025) and export panel_data_clean.csv`
+   - **`feat(eda)`**: Chạy thống kê mô tả, ma trận tương quan, biểu đồ Okun/Phillips $\rightarrow$ Xuất figures và summary tables.
+     * *Ví dụ:* `feat(eda): generate descriptive stats table, correlation heatmap and Okun/Phillips scatter plots`
+   - **`feat(baseline)`**: Chạy hồi quy Pooled OLS, FEM, REM, kiểm định Hausman và Cluster-robust SE $\rightarrow$ Xuất bảng mô hình cơ sở.
+     * *Ví dụ:* `feat(baseline): estimate Pooled OLS, FEM, REM and compute cluster-robust standard errors`
+   - **`feat(causal)`**: Chạy mô hình Two-Way Fixed Effects kết hợp biến trễ 1 kỳ $\rightarrow$ Xuất bảng so sánh TWFE.
+     * *Ví dụ:* `feat(causal): estimate TWFE model with 1-period lagged regressors for causal orientation`
+   - **`feat(subsample)`**: Chạy phân tích phân nhóm Low-income vs Middle-income $\rightarrow$ Xuất bảng đối chiếu cấu trúc.
+     * *Ví dụ:* `feat(subsample): estimate heterogeneity models for low vs middle income subsamples`
+   - **`docs(...)`**: Cập nhật tài liệu, phân tích kết quả hoặc bản thảo các chương báo cáo.
+     * *Ví dụ:* `docs(report): update chapter 4 empirical results and econometric interpretations`
+
