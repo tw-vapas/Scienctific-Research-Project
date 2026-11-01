@@ -7,8 +7,11 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
-  library(tidyverse)
+  library(readr)
+  library(dplyr)
+  library(tidyr)
   library(plm)
+  library(zoo)
 })
 
 cat(">>> BẮT ĐẦU QUY TRÌNH LÀM SẠCH DỮ LIỆU BẢNG (GIAI ĐOẠN 1) <<<\n")

@@ -8,7 +8,9 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
-  library(tidyverse)
+  library(readr)
+  library(dplyr)
+  library(tidyr)
   library(plm)
   library(lmtest)
   library(sandwich)
