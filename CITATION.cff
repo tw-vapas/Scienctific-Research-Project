@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this dataset, methodology, or empirical code, please cite it as below."
+title: "Analyzing Macroeconomic Factors Associated with Unemployment Rates in Low- and Middle-Income Countries: An Empirical Correlation Approach with Causal Inference Orientations"
+authors:
+  - family-names: "Research Team"
+    given-names: "NCKH 2026-2027"
+    affiliation: "University Student Scientific Research"
+date-released: 2026-10-19
+version: "1.0.0"
+repository-code: "https://github.com/tw-vapas/scientific-research-lmic-unemployment"
+keywords:
+  - "unemployment"
+  - "macroeconomics"
+  - "panel-data"
+  - "econometrics"
+  - "causal-inference"
+  - "two-way-fixed-effects"
+  - "low-and-middle-income-countries"
+  - "world-bank-wdi"
+  - "okun-law"
+  - "phillips-curve"
+license: "MIT"

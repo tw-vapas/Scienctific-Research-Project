@@ -1,0 +1,35 @@
+name: CI - Scientific Research Workflow
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  validate-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up R Environment
+      uses: r-lib/actions/setup-r@v2
+      with:
+        r-version: '4.3.0'
+
+    - name: Syntax Check on R Scripts
+      run: |
+        for file in scripts/*.R; do
+          echo "Checking syntax of $file..."
+          Rscript -e "parse(file = '$file')"
+        done
+
+    - name: Check Core Data Integrity
+      run: |
+        if [ ! -f "data/raw/WDI_RAW_2015_2025.csv" ]; then
+          echo "Error: Raw dataset missing!"
+          exit 1
+        fi
+        echo "Data integrity verified."

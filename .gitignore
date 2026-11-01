@@ -1,0 +1,89 @@
+# ==============================================================================
+# Gitignore for Scientific Research (Econometrics & Data Science with R/Python)
+# ==============================================================================
+
+# --- Operating System & IDE Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# VS Code & Antigravity IDE
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- R specific ignores ---
+.Rhistory
+.RData
+.RDataTmp
+.Ruserdata
+.Rproj.user/
+*.Rproj
+.Renviron
+.Rprofile.site
+
+# --- Python & Jupyter specific ignores ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Document Drafting & LaTeX Temporary Files ---
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+~$*
+.~lock.*
+
+# --- Large Generated Files & Cache ---
+# Keep tracked raw/processed samples, ignore heavy local caches or temp exports
+*.tmp
+*.temp
+scratch/
+.cache/
+
+# Keep empty git folders tracked
+!.gitkeep
