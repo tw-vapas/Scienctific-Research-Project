@@ -8,9 +8,9 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
+  library(stats)
+  library(utils)
   library(readr)
-  library(dplyr)
-  library(tidyr)
   library(plm)
   library(lmtest)
   library(sandwich)
@@ -18,9 +18,19 @@ suppressPackageStartupMessages({
 
 source("scripts/utils/export_helpers.R")
 
+# Khai báo biến công thức hồi quy tránh cảnh báo Linter
+Unemployment <- GDP_growth <- Inflation <- FDI <- Trade <- NULL
+Female_LFPR <- Credit_private <- log_GDP_pc <- NULL
+invisible(utils::globalVariables(c(
+  "Unemployment", "GDP_growth", "Inflation", "FDI", "Trade",
+  "Female_LFPR", "Credit_private", "log_GDP_pc"
+)))
+
 cat(">>> BẮT ĐẦU ƯỚC LƯỢNG MÔ HÌNH BẢNG CƠ SỞ (GIAI ĐOẠN 2) <<<\n")
 
-load("data/processed/panel_data.RData")
+data_env <- new.env()
+load("data/processed/panel_data.RData", envir = data_env)
+pdata <- data_env$pdata
 
 # 1. Chuẩn bị biến: Lấy log tự nhiên của GDP_pc để chuẩn hóa phân phối
 pdata$log_GDP_pc <- log(pdata$GDP_pc)

@@ -8,9 +8,9 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
+  library(stats)
+  library(utils)
   library(readr)
-  library(dplyr)
-  library(tidyr)
   library(plm)
   library(lmtest)
   library(sandwich)
@@ -18,9 +18,19 @@ suppressPackageStartupMessages({
 
 source("scripts/utils/export_helpers.R")
 
+# Khai báo biến công thức hồi quy tránh cảnh báo Linter
+Unemployment <- GDP_growth <- Inflation <- FDI <- Trade <- NULL
+Female_LFPR <- Credit_private <- log_GDP_pc <- NULL
+invisible(utils::globalVariables(c(
+  "Unemployment", "GDP_growth", "Inflation", "FDI", "Trade",
+  "Female_LFPR", "Credit_private", "log_GDP_pc"
+)))
+
 cat(">>> BẮT ĐẦU PHÂN TÍCH PHÂN NHÓM THU NHẬP (GIAI ĐOẠN 3) <<<\n")
 
-load("data/processed/panel_data.RData")
+data_env <- new.env()
+load("data/processed/panel_data.RData", envir = data_env)
+pdata <- data_env$pdata
 
 pdata$log_GDP_pc <- log(pdata$GDP_pc)
 
@@ -56,7 +66,7 @@ model_mid <- plm(fmla_lagged, data = pdata_mid, model = "within", effect = "twow
 se_mid <- vcovHC(model_mid, type = "HC1", cluster = "group")
 
 # 5. Lập bảng so sánh Sub-sample
-vars_lag <- names(coef(model_full))
+vars_lag <- names(stats::coef(model_full))
 
 format_coef <- function(model, vcov_mat, var_name) {
   cf <- coeftest(model, vcov. = vcov_mat)

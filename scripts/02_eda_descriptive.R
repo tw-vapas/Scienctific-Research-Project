@@ -7,6 +7,9 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
+  library(stats)
+  library(utils)
+  library(grDevices)
   library(readr)
   library(dplyr)
   library(tidyr)
@@ -14,6 +17,13 @@ suppressPackageStartupMessages({
   library(corrplot)
   library(scales)
 })
+
+# Khai báo biến cột phục vụ Non-Standard Evaluation (NSE) tránh cảnh báo Linter
+Variable <- Value <- GDP_growth <- Unemployment <- Inflation <- income <- year <- mean_unemp <- x <- y <- NULL
+invisible(utils::globalVariables(c(
+  "Variable", "Value", "GDP_growth", "Unemployment",
+  "Inflation", "income", "year", "mean_unemp", "x", "y"
+)))
 
 cat(">>> BẮT ĐẦU THỐNG KÊ MÔ TẢ & EDA (GIAI ĐOẠN 1) <<<\n")
 
@@ -26,6 +36,8 @@ core_vars <- c("Unemployment", "GDP_growth", "GDP_pc", "Inflation",
                "FDI", "Trade", "Female_LFPR", "Credit_private")
 
 # 1. Bảng thống kê mô tả toàn diện
+round_num <- function(x) round(x, 3)
+
 summary_table <- df %>%
   select(all_of(core_vars)) %>%
   pivot_longer(cols = everything(), names_to = "Variable", values_to = "Value") %>%
@@ -33,15 +45,15 @@ summary_table <- df %>%
   summarise(
     N = sum(!is.na(Value)),
     Mean = mean(Value, na.rm = TRUE),
-    SD = sd(Value, na.rm = TRUE),
+    SD = stats::sd(Value, na.rm = TRUE),
     Min = min(Value, na.rm = TRUE),
-    Q25 = quantile(Value, 0.25, na.rm = TRUE),
-    Median = median(Value, na.rm = TRUE),
-    Q75 = quantile(Value, 0.75, na.rm = TRUE),
+    Q25 = stats::quantile(Value, 0.25, na.rm = TRUE),
+    Median = stats::median(Value, na.rm = TRUE),
+    Q75 = stats::quantile(Value, 0.75, na.rm = TRUE),
     Max = max(Value, na.rm = TRUE),
     .groups = "drop"
   ) %>%
-  mutate(across(where(is.numeric), ~ round(.x, 3)))
+  mutate(across(where(is.numeric), round_num))
 
 write_csv(summary_table, "reports/tables/table1_summary_statistics.csv")
 cat("Đã lưu bảng thống kê mô tả vào reports/tables/table1_summary_statistics.csv\n")
@@ -51,21 +63,24 @@ cor_data <- df %>%
   select(all_of(core_vars)) %>%
   drop_na()
 
-cor_matrix <- cor(cor_data)
-write.csv(round(cor_matrix, 3), "reports/tables/table2_correlation_matrix.csv")
+cor_matrix <- stats::cor(cor_data)
+utils::write.csv(round(cor_matrix, 3), "reports/tables/table2_correlation_matrix.csv")
 
-png("reports/figures/fig1_correlation_heatmap.png", width = 800, height = 800, res = 120)
+grDevices::png("reports/figures/fig1_correlation_heatmap.png", width = 800, height = 800, res = 120)
 corrplot(cor_matrix, method = "color", type = "upper", 
          tl.col = "black", tl.srt = 45, addCoef.col = "black", 
-         number.cex = 0.8, col = colorRampPalette(c("#2166ac", "#ffffff", "#b2182b"))(200),
+         number.cex = 0.8, col = grDevices::colorRampPalette(c("#2166ac", "#ffffff", "#b2182b"))(200),
          title = "Ma Trận Hệ Số Tương Quan Giữa Các Biến Vĩ Mô (88 LMICs)", mar = c(0,0,2,0))
-dev.off()
+invisible(grDevices::dev.off())
 cat("Đã lưu biểu đồ Heatmap tương quan vào reports/figures/fig1_correlation_heatmap.png\n")
 
 # 3. Đồ thị phân tán kiểm tra Định luật Okun (Unemployment vs GDP Growth)
-p_okun <- ggplot(df, aes(x = GDP_growth, y = Unemployment)) +
-  geom_point(aes(color = income), alpha = 0.6, size = 2) +
-  geom_smooth(method = "lm", color = "#d95f02", se = TRUE, linetype = "solid") +
+df_okun <- df %>%
+  filter(!is.na(GDP_growth) & !is.na(Unemployment))
+
+p_okun <- ggplot(df_okun, aes(x = GDP_growth, y = Unemployment)) +
+  geom_point(aes(color = income), alpha = 0.6, size = 2, na.rm = TRUE) +
+  geom_smooth(method = "lm", formula = y ~ x, color = "#d95f02", se = TRUE, linetype = "solid", na.rm = TRUE) +
   labs(
     title = "Quan Hệ Thực Nghiệm Giữa Tăng Trưởng GDP & Thất Nghiệp (Kiểm định Định luật Okun)",
     subtitle = "Mẫu bảng 88 quốc gia LMICs giai đoạn 2015 - 2025",
@@ -79,10 +94,14 @@ p_okun <- ggplot(df, aes(x = GDP_growth, y = Unemployment)) +
 ggsave("reports/figures/fig2_okun_scatter.png", p_okun, width = 8, height = 6, dpi = 300)
 
 # 4. Đồ thị phân tán kiểm tra Đường cong Phillips (Unemployment vs Inflation)
-p_phillips <- ggplot(df, aes(x = Inflation, y = Unemployment)) +
-  geom_point(aes(color = income), alpha = 0.6, size = 2) +
-  geom_smooth(method = "lm", color = "#7570b3", se = TRUE, linetype = "dashed") +
-  scale_x_continuous(limits = c(-5, 40)) + # Giới hạn dải lạm phát tránh méo mó do ngoại lai siêu lạm phát
+# Lọc trước các quan sát lạm phát trong dải [-5%, 40%] để tránh méo mó do ngoại lai siêu lạm phát (13 quan sát)
+df_phillips <- df %>%
+  filter(!is.na(Inflation) & !is.na(Unemployment) & Inflation >= -5 & Inflation <= 40)
+
+p_phillips <- ggplot(df_phillips, aes(x = Inflation, y = Unemployment)) +
+  geom_point(aes(color = income), alpha = 0.6, size = 2, na.rm = TRUE) +
+  geom_smooth(method = "lm", formula = y ~ x, color = "#7570b3", se = TRUE, linetype = "dashed", na.rm = TRUE) +
+  scale_x_continuous(limits = c(-5, 40)) +
   labs(
     title = "Mối Quan Hệ Đánh Đổi Ngắn Hạn: Lạm Phát vs Thất Nghiệp (Đường cong Phillips)",
     subtitle = "Khảo sát tại các quốc gia thu nhập thấp và trung bình",

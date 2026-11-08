@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài Báo Nghiên Cứu Khoa Học: Các Yếu Tố Kinh Tế Vĩ Mô Liên Quan Đến Tỷ Lệ Thất Nghiệp Tại Các Quốc Gia LMICs (2015–2025)</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 22mm 20mm 22mm 25mm;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 11.5pt;
+      line-height: 1.55;
+      color: #111111;
+      margin: 0;
+      padding: 0;
+      text-align: justify;
+    }
+    /* Cover Page */
+    .cover-page {
+      page-break-after: always;
+      text-align: center;
+      padding-top: 15mm;
+      min-height: 240mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px double #1a2a3a;
+      padding: 18mm 14mm;
+    }
+    .cover-header {
+      font-size: 12pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      line-height: 1.6;
+    }
+    .cover-divider {
+      width: 45%;
+      margin: 10px auto 25px auto;
+      border-top: 1.5px solid #1a2a3a;
+    }
+    .cover-type {
+      font-size: 13pt;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      color: #222;
+      margin-bottom: 18px;
+    }
+    .cover-title-vi {
+      font-size: 16.5pt;
+      font-weight: bold;
+      line-height: 1.45;
+      text-transform: uppercase;
+      color: #0b1f3a;
+      margin: 10px 0 18px 0;
+    }
+    .cover-title-en {
+      font-size: 13pt;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 1.45;
+      color: #2c3e50;
+      margin: 0 0 24px 0;
+    }
+    .cover-meta-box {
+      text-align: left;
+      margin: 20px auto;
+      width: 92%;
+      border-top: 1.5px solid #000;
+      border-bottom: 1.5px solid #000;
+      padding: 12px 16px;
+      font-size: 11pt;
+      line-height: 1.65;
+    }
+    .cover-footer {
+      font-size: 11.5pt;
+      font-weight: bold;
+      margin-top: 25px;
+      text-transform: uppercase;
+    }
+
+    /* Headings */
+    h1.part-heading {
+      font-size: 14.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #000000;
+      border-bottom: 1.5px solid #000000;
+      padding-bottom: 5px;
+      margin-top: 24px;
+      margin-bottom: 14px;
+      page-break-after: avoid;
+      text-align: left;
+    }
+    h2.section-heading {
+      font-size: 12.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+      text-align: left;
+    }
+    h3.subsection-heading {
+      font-size: 11.5pt;
+      font-weight: bold;
+      font-style: italic;
+      color: #111111;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+      text-align: left;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 9px;
+      text-indent: 0;
+    }
+    ul, ol {
+      margin-top: 4px;
+      margin-bottom: 10px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+
+    /* Abstract Box */
+    .abstract-section {
+      page-break-after: always;
+    }
+    .abstract-box {
+      border-top: 1.5px solid #000;
+      border-bottom: 1.5px solid #000;
+      padding: 12px 0;
+      margin-bottom: 16px;
+    }
+    .keywords {
+      font-size: 11pt;
+      margin-top: 8px;
+    }
+
+    /* Table of Contents */
+    .toc-page {
+      page-break-after: always;
+    }
+    .toc-list {
+      list-style: none;
+      padding-left: 0;
+      line-height: 1.42;
+      font-size: 10.8pt;
+      margin-bottom: 10px;
+    }
+    .toc-list li.toc-part {
+      font-weight: bold;
+      margin-top: 5px;
+      margin-bottom: 2px;
+    }
+    .toc-list li.toc-sub {
+      padding-left: 20px;
+      font-weight: normal;
+      margin-bottom: 2px;
+    }
+
+    /* Academic 3-Line Tables (APA 7th Standard) */
+    .table-container {
+      margin: 16px 0 18px 0;
+      page-break-inside: avoid;
+    }
+    .table-caption {
+      font-size: 11pt;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+    table.academic-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+      font-size: 9.5pt;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    table.academic-table thead th {
+      border-bottom: 1px solid #000000;
+      padding: 6px 5px;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+    }
+    table.academic-table thead th.left,
+    table.academic-table tbody td.left {
+      text-align: left;
+    }
+    table.academic-table tbody td {
+      padding: 4px 5px;
+      text-align: center;
+      vertical-align: top;
+      border: none;
+    }
+    table.academic-table tbody tr.midrule td {
+      border-top: 1px solid #000000;
+      padding-top: 5px;
+    }
+    table.academic-table tbody tr.se-row td {
+      padding-top: 0px;
+      padding-bottom: 5px;
+      color: #222;
+    }
+    .table-note {
+      font-size: 9.2pt;
+      font-style: italic;
+      text-align: justify;
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+
+    /* Mathematical Equations */
+    .equation-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 0;
+      padding: 6px 14px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 11.5pt;
+      page-break-inside: avoid;
+    }
+    .equation-formula {
+      text-align: center;
+      flex-grow: 1;
+    }
+    .equation-num {
+      font-weight: normal;
+      margin-left: 15px;
+      white-space: nowrap;
+    }
+    .math {
+      font-family: "Times New Roman", Times, serif;
+      white-space: nowrap;
+    }
+    .frac {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 92%;
+      margin: 0 2px;
+    }
+    .frac > .num {
+      display: block;
+      border-bottom: 1px solid #000;
+      padding: 0 3px;
+    }
+    .frac > .den {
+      display: block;
+      padding: 0 3px;
+    }
+    .overline {
+      text-decoration: overline;
+    }
+
+    /* References (APA 7th Hanging Indent) */
+    .references-list p {
+      padding-left: 28px;
+      text-indent: -28px;
+      margin-bottom: 7px;
+      font-size: 10.8pt;
+      line-height: 1.48;
+    }
+
+    /* Code Block in Appendix */
+    pre.code-block {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 8.8pt;
+      line-height: 1.38;
+      background-color: #f8f9fa;
+      border-top: 1.5px solid #000;
+      border-bottom: 1.5px solid #000;
+      padding: 10px 12px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      text-align: left;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TRANG BÌA (COVER PAGE) ==================== -->
+  <div class="cover-page">
+    <div>
+      <div class="cover-header">
+        CÔNG TRÌNH NGHIÊN CỨU KHOA HỌC (NCKH 2026 – 2027)<br>
+        CHUYÊN NGÀNH: KINH TẾ HỌC PHÁT TRIỂN &amp; KINH TẾ LƯỢNG ỨNG DỤNG
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-type">BÁO CÁO NGHIÊN CỨU KHOA HỌC TOÀN VĂN</div>
+    </div>
+
+    <div>
+      <div class="cover-title-vi">
+        PHÂN TÍCH CÁC YẾU TỐ KINH TẾ VĨ MÔ LIÊN QUAN ĐẾN TỶ LỆ THẤT NGHIỆP TẠI CÁC QUỐC GIA THU NHẬP THẤP VÀ TRUNG BÌNH:<br>
+        TIẾP CẬN TỪ THỰC NGHIỆM TƯƠNG QUAN VÀ ĐỊNH HƯỚNG SUY LUẬN NHÂN QUẢ
+      </div>
+      <div class="cover-title-en">
+        Macroeconomic Determinants of Unemployment in Low- and Middle-Income Countries:<br>
+        An Empirical Investigation from Correlational Dynamics to Causal-Oriented Panel Inference
+      </div>
+    </div>
+
+    <div class="cover-meta-box">
+      <strong>• Lĩnh vực nghiên cứu:</strong> Kinh tế học Phát triển &amp; Kinh tế lượng Ứng dụng (Applied Econometrics &amp; Empirical Development Economics)<br>
+      <strong>• Phân loại mã JEL (JEL Codes):</strong> E24, J21, F16, F21, O11, C23<br>
+      <strong>• Phạm vi dữ liệu:</strong> Dữ liệu bảng cân đối (Balanced Panel Data) gồm 88 quốc gia thu nhập thấp và trung bình (LMICs), giai đoạn 2015 – 2025 (<i>N</i> = 968 quan sát)<br>
+      <strong>• Nguồn dữ liệu gốc:</strong> World Development Indicators (WDI) – Ngân hàng Thế giới (World Bank)<br>
+      <strong>• Khung phương pháp kinh tế lượng:</strong> Pooled OLS, FEM, REM, Kiểm định Chow F / Breusch–Pagan LM / Hausman, Kiểm định VIF / Modified Wald / Wooldridge / Pesaran CD, Ước lượng Sai số chuẩn vững Driscoll–Kraay (DK-SE) và Mô hình Tác động cố định hai chiều biến trễ (Lagged TWFE)<br>
+      <strong>• Bộ công cụ thực nghiệm:</strong> Ngôn ngữ thống kê R / RStudio (gói <code>plm</code>, <code>lmtest</code>, <code>sandwich</code>, <code>car</code>, <code>stargazer</code>, <code>dplyr</code>)
+    </div>
+
+    <div class="cover-footer">
+      THÀNH PHỐ HỒ CHÍ MINH — NĂM 2026
+    </div>
+  </div>
+
+  <!-- ==================== TÓM TẮT (ABSTRACT) ==================== -->
+  <div class="abstract-section">
+    <h1 class="part-heading" style="margin-top:0;">TÓM TẮT HỌC THUẬT (ABSTRACT)</h1>
+
+    <div class="abstract-box">
+      <p><strong>Tóm tắt Tiếng Việt:</strong> Nghiên cứu này phân tích toàn diện tác động của các yếu tố kinh tế vĩ mô đến tỷ lệ thất nghiệp tại các quốc gia thu nhập thấp và trung bình (LMICs), nơi thị trường lao động mang tính phân mảnh cao và chịu tổn thương sâu sắc trước các cú sốc chu kỳ toàn cầu. Sử dụng bộ dữ liệu bảng cân đối gồm 88 quốc gia LMICs trong giai đoạn 2015–2025 (<i>N</i> = 968 quan sát) trích xuất từ cơ sở dữ liệu World Development Indicators (WDI) của Ngân hàng Thế giới, nghiên cứu triển khai quy trình kinh tế lượng tuần tự từ các mô hình tĩnh cổ điển — bao gồm Hồi quy gộp (Pooled OLS), Mô hình tác động cố định (FEM) và Mô hình tác động ngẫu nhiên (REM) — đến các kiểm định chẩn đoán khuyết tật toàn diện (kiểm định đa cộng tuyến VIF, phương sai thay đổi Modified Wald, tự tương quan chuỗi Wooldridge và phụ thuộc chéo không gian Pesaran CD). Để khắc phục đồng thời cả ba khuyết tật cấu trúc trên và kiểm soát rủi ro nội sinh do tác động đồng thời, bài báo áp dụng ước lượng sai số chuẩn vững Driscoll–Kraay (Driscoll–Kraay Standard Errors) kết hợp mô hình Tác động cố định hai chiều với biến giải thích trễ một kỳ (Lagged Two-Way Fixed Effects – TWFE). Kết quả thực nghiệm cho thấy: (i) Tăng trưởng kinh tế và độ mở thương mại có tác động làm giảm tỷ lệ thất nghiệp có ý nghĩa thống kê, song hệ số co giãn Okun tại khối LMICs khá nhỏ (<span class="math"><i>β̂</i><sub>1</sub> = −0.0584, <i>p</i> &lt; 0.05</span>), phản ánh hiện tượng "tăng trưởng nghèo việc làm" và vai trò hấp thụ đệm của khu vực phi chính thức; (ii) Lạm phát duy trì mối quan hệ đánh đổi ngắn hạn theo đường cong Phillips (<span class="math"><i>β̂</i><sub>2</sub> = −0.0214, <i>p</i> &lt; 0.01</span>); (iii) Dòng vốn FDI ròng có tác động giảm thất nghiệp nhưng biên độ yếu do thiên lệch thâm dụng vốn; và (iv) Hiệu ứng làm giảm thất nghiệp của tăng trưởng và thương mại chỉ phát huy rõ nét tại nhóm quốc gia thu nhập trung bình, trong khi mờ nhạt tại nhóm quốc gia thu nhập thấp. Nghiên cứu đóng góp bằng chứng thực nghiệm cập nhật hậu đại dịch COVID-19 và cung cấp khung hàm ý chính sách vĩ mô hướng tới việc làm bền vững cho các nền kinh tế đang phát triển.</p>
+
+      <p style="margin-bottom:0;"><strong>Abstract (English):</strong> This study investigates the macroeconomic determinants of unemployment across low- and middle-income countries (LMICs), where labor markets are characterized by pervasive informality and structural vulnerability to global shocks. Utilizing a balanced panel dataset of 88 LMICs over the period 2015–2025 (<i>N</i> = 968 observations) retrieved from the World Bank’s World Development Indicators (WDI), we employ a rigorous econometric progression from baseline panel estimators—Pooled Ordinary Least Squares (Pooled OLS), Fixed Effects (FEM), and Random Effects (REM)—to comprehensive diagnostic testing for multicollinearity (VIF), groupwise heteroskedasticity (Modified Wald test), first-order serial correlation (Wooldridge test), and cross-sectional dependence (Pesaran CD test). To simultaneously account for heteroskedasticity, autocorrelation, and spatial cross-sectional dependence while mitigating simultaneity bias, we implement the non-parametric Driscoll–Kraay covariance estimator alongside a lagged Two-Way Fixed Effects (TWFE) specification and income-group subsample analysis. Empirical findings confirm that: (i) Economic growth and trade openness significantly reduce unemployment, yet the muted Okun coefficient (<span class="math"><i>β̂</i><sub>1</sub> = −0.0584, <i>p</i> &lt; 0.05</span>) underscores structural "jobless growth" and informal labor buffering in LMICs; (ii) Inflation exhibits a statistically significant short-run Phillips curve trade-off (<span class="math"><i>β̂</i><sub>2</sub> = −0.0214, <i>p</i> &lt; 0.01</span>); (iii) Net FDI inflows exert only a modest employment-generating effect due to capital-intensive bias and domestic crowding-out; and (iv) Macroeconomic transmission mechanisms operate robustly in middle-income economies but remain statistically attenuated in low-income nations. These findings enrich the empirical development literature by accounting for cross-country spillovers and offer actionable macroeconomic policy designs for employment-intensive growth.</p>
+    </div>
+
+    <div class="keywords">
+      <p><strong>Từ khóa (Keywords):</strong> Tỷ lệ thất nghiệp (Unemployment Rate); Định luật Okun (Okun's Law); Đường cong Phillips (Phillips Curve); Quốc gia thu nhập thấp và trung bình (LMICs); Sai số chuẩn vững Driscoll–Kraay (Driscoll–Kraay Standard Errors); Mô hình tác động cố định hai chiều (Two-Way Fixed Effects).</p>
+      <p><strong>Phân loại mã JEL (JEL Classification):</strong> E24 (Employment, Unemployment, Wages); J21 (Labor Force and Employment, Size, and Structure); F16 (Trade and Labor Market Interactions); F21 (International Investment); O11 (Macroeconomic Analyses of Economic Development); C23 (Panel Data Models).</p>
+    </div>
+  </div>
+
+  <!-- ==================== MỤC LỤC & DANH MỤC BẢNG BIỂU ==================== -->
+  <div class="toc-page">
+    <h1 class="part-heading" style="margin-top:0;">MỤC LỤC (TABLE OF CONTENTS)</h1>
+    <ul class="toc-list">
+      <li class="toc-part">PHẦN 1: GIỚI THIỆU (INTRODUCTION)</li>
+      <li class="toc-sub">1.1. Bối cảnh và Tính cấp thiết của đề tài</li>
+      <li class="toc-sub">1.2. Vấn đề nghiên cứu và Câu hỏi nghiên cứu</li>
+      <li class="toc-sub">1.3. Mục tiêu nghiên cứu (Tổng quát &amp; Cụ thể)</li>
+      <li class="toc-sub">1.4. Đối tượng và Phạm vi nghiên cứu</li>
+      <li class="toc-sub">1.5. Đóng góp mới của nghiên cứu</li>
+      <li class="toc-sub">1.6. Kết cấu của bài báo</li>
+
+      <li class="toc-part">PHẦN 2: TỔNG QUAN TÀI LIỆU VÀ CƠ SỞ LÝ THUYẾT (LITERATURE REVIEW &amp; THEORETICAL FRAMEWORK)</li>
+      <li class="toc-sub">2.1. Các nền tảng lý thuyết kinh tế (Thị trường lao động, Định luật Okun, Đường cong Phillips, FDI, Thương mại H–O)</li>
+      <li class="toc-sub">2.2. Lược khảo các nghiên cứu thực nghiệm trên thế giới và tại các nước đang phát triển</li>
+      <li class="toc-sub">2.3. Khoảng trống nghiên cứu (Research Gap)</li>
+      <li class="toc-sub">2.4. Khung phân tích và Giả thuyết nghiên cứu (H1, H2, H3, H4)</li>
+
+      <li class="toc-part">PHẦN 3: DỮ LIỆU VÀ PHƯƠNG PHÁP NGHIÊN CỨU (DATA &amp; METHODOLOGY)</li>
+      <li class="toc-sub">3.1. Dữ liệu, Tiêu chí chọn mẫu và Định nghĩa biến số (Bảng 3.1)</li>
+      <li class="toc-sub">3.2. Mô hình kinh tế lượng đặc tả</li>
+      <li class="toc-sub">3.3. Quy trình ước lượng và Kiểm định chẩn đoán (5 Bước chuẩn mực)</li>
+
+      <li class="toc-part">PHẦN 4: KẾT QUẢ NGHIÊN CỨU VÀ THẢO LUẬN (EMPIRICAL RESULTS &amp; DISCUSSION)</li>
+      <li class="toc-sub">4.1. Thống kê mô tả và Phân rã phương sai Between/Within (Bảng 4.1)</li>
+      <li class="toc-sub">4.2. Ma trận hệ số tương quan Pearson và Kiểm định đa cộng tuyến VIF (Bảng 4.2)</li>
+      <li class="toc-sub">4.3. Kết quả ước lượng đa mô hình dữ liệu bảng và Chẩn đoán khuyết tật (Bảng 4.3)</li>
+      <li class="toc-sub">4.4. Thảo luận chi tiết kết quả thực nghiệm (Econometric &amp; Economic Discussion)</li>
+      <li class="toc-sub">4.5. Kiểm định độ bền với biến trễ bậc 1 (<i>t</i>−1) và Phân tích phân nhóm thu nhập (Bảng 4.4)</li>
+
+      <li class="toc-part">PHẦN 5: KẾT LUẬN VÀ HÀM Ý CHÍNH SÁCH (CONCLUSION &amp; POLICY IMPLICATIONS)</li>
+      <li class="toc-sub">5.1. Kết luận chính</li>
+      <li class="toc-sub">5.2. Hàm ý chính sách vĩ mô thực tiễn cho các chính phủ thuộc khối LMICs</li>
+      <li class="toc-sub">5.3. Hạn chế của nghiên cứu</li>
+      <li class="toc-sub">5.4. Định hướng nghiên cứu tiếp theo</li>
+
+      <li class="toc-part">TÀI LIỆU THAM KHẢO (REFERENCES — CHUẨN APA 7TH EDITION)</li>
+      <li class="toc-part">PHỤ LỤC (APPENDICES: DANH SÁCH 88 QUỐC GIA LMICs &amp; MÃ NGUỒN R TÁI LẬP)</li>
+    </ul>
+
+    <h2 class="section-heading" style="border-bottom: 1px solid #000; padding-bottom: 4px;">DANH MỤC BẢNG BIỂU HỌC THUẬT (LIST OF ACADEMIC TABLES)</h2>
+    <ul>
+      <li><strong>Bảng 3.1:</strong> Định nghĩa các biến, công thức tính, mã chỉ số WDI, nguồn trích xuất và dấu kỳ vọng lý thuyết.</li>
+      <li><strong>Bảng 4.1:</strong> Thống kê mô tả toàn diện các biến số trong mô hình (Mean, Overall SD, Between SD, Within SD, Min, Max, Skewness, Kurtosis, <i>N</i> = 968).</li>
+      <li><strong>Bảng 4.2:</strong> Ma trận hệ số tương quan cặp đôi Pearson và Kiểm định đa cộng tuyến qua hệ số phóng đại phương sai (VIF).</li>
+      <li><strong>Bảng 4.3:</strong> Kết quả ước lượng đa mô hình dữ liệu bảng (Pooled OLS, REM, FEM, Cluster-Robust FEM, Driscoll–Kraay FEM) và bộ kiểm định chẩn đoán.</li>
+      <li><strong>Bảng 4.4:</strong> Kết quả kiểm định độ bền với Mô hình TWFE biến trễ bậc 1 (<i>t</i> − 1) và Phân tích bất đồng nhất theo nhóm thu nhập (Low-Income vs. Middle-Income).</li>
+    </ul>
+  </div>
+
+  <!-- ==================== PHẦN 1: GIỚI THIỆU ==================== -->
+  <h1 class="part-heading">PHẦN 1: GIỚI THIỆU (INTRODUCTION)</h1>
+
+  <h2 class="section-heading">1.1. Bối cảnh và Tính cấp thiết của đề tài</h2>
+  <p>Thất nghiệp luôn là một trong những vấn đề kinh tế vĩ mô trung tâm và gay gắt nhất của lý thuyết phát triển hiện đại. Không chỉ đơn thuần phản ánh sự lãng phí nguồn lực sản xuất quý giá nhất của một quốc gia — sức lao động — tỷ lệ thất nghiệp cao và kéo dài còn bào mòn vốn con người thông qua hiệu ứng trễ (<i>hysteresis effect</i>), làm suy giảm tổng cầu tiêu dùng, gia tăng bất bình đẳng thu nhập và đe dọa trực tiếp đến sự ổn định chính trị - xã hội (Blanchard &amp; Summers, 1986; ILO, 2024). Đối với khối các quốc gia có thu nhập thấp và trung bình (<i>Low- and Middle-Income Countries</i> – LMICs), bài toán giải quyết việc làm mang những đặc thù cấu trúc phức tạp hơn rất nhiều so với các nền kinh tế công nghiệp phát triển (OECD).</p>
+
+  <p>Giai đoạn 2015–2025 đánh dấu một thập kỷ đầy biến động mang tính bước ngoặt đối với thị trường lao động tại các quốc gia LMICs. Nhìn lại tiến trình lịch sử kinh tế trong mười một năm này, các nền kinh tế đang phát triển đã phải đối mặt với một chuỗi các cú sốc ngoại sinh liên hoàn chưa từng có tiền lệ:</p>
+  <ol>
+    <li><strong>Sự phân mảnh thương mại và tái cấu trúc chuỗi cung ứng toàn cầu (2015–2019):</strong> Căng thẳng thương mại giữa các siêu cường kinh tế và xu hướng dịch chuyển sản xuất tạo ra cơ hội đan xen thách thức đối với các ngành chế biến, chế tạo thâm dụng lao động tại các nước đang phát triển.</li>
+    <li><strong>Cú sốc đại dịch COVID-19 (2020–2021):</strong> Các biện pháp phong tỏa hành chính và đứt gãy chuỗi cung ứng toàn cầu đã đẩy hàng trăm triệu lao động tại khu vực LMICs vào tình trạng mất việc làm đột ngột. Khác với các quốc gia thu nhập cao có hệ thống bảo hiểm thất nghiệp và gói kích cầu tài khóa quy mô lớn để duy trì việc làm (<i>job retention schemes</i>), cấu trúc ngân sách hạn hẹp tại LMICs khiến thị trường lao động phải tự điều chỉnh thông qua sự phình to của khu vực phi chính thức (<i>informal sector</i>) và tình trạng thiếu việc làm (<i>underemployment</i>).</li>
+    <li><strong>Cú sốc lạm phát chi phí đẩy và chu kỳ thắt chặt tiền tệ toàn cầu (2022–2025):</strong> Xung đột địa chính trị, khủng hoảng giá lương thực - năng lượng và làn sóng tăng lãi suất điều hành đồng loạt của các ngân hàng trung ương lớn đã làm gia tăng chi phí vốn vay, thu hẹp dòng vốn đầu tư trực tiếp nước ngoài (FDI) và tạo ra áp lực đình trệ kèm lạm phát (<i>stagflation risk</i>) tại nhiều nền kinh tế đang phát triển.</li>
+  </ol>
+
+  <p>Đáng chú ý hơn, nhiều quốc gia LMICs đang phải đối diện với nghịch lý <strong>"tăng trưởng không tạo ra việc làm"</strong> (<i>jobless growth</i>). Ngay cả trong những năm tốc độ tăng trưởng GDP phục hồi tích cực, khả năng hấp thụ lao động mới vào khu vực kinh tế chính thức vẫn rất hạn chế do quá trình chuyển dịch công nghệ thiên lệch về vốn (<i>capital-biased technological change</i>) và sự bất tương xứng giữa kỹ năng của lực lượng lao động với nhu cầu của khu vực doanh nghiệp hiện đại (Rodrik, 2016; Fields, 2019). Trong bối cảnh đó, việc nhận diện chính xác mức độ, chiều hướng và cơ chế truyền dẫn của các biến số kinh tế vĩ mô cốt lõi — bao gồm tăng trưởng GDP, lạm phát, dòng vốn FDI và độ mở thương mại — đến tỷ lệ thất nghiệp tại các nước LMICs không chỉ có ý nghĩa kiểm định lại các trụ cột lý thuyết kinh tế học vĩ mô kinh điển mà còn là yêu cầu cấp bách để thiết kế hệ thống chính sách phát triển bao trùm.</p>
+
+  <h2 class="section-heading">1.2. Vấn đề nghiên cứu &amp; Câu hỏi nghiên cứu</h2>
+  <p>Mặc dù các học thuyết kinh tế nền tảng như Định luật Okun (Okun, 1962), Đường cong Phillips (Phillips, 1958) hay Định lý thương mại Heckscher–Ohlin đã được xác lập vững chắc tại các nền kinh tế phát triển, bằng chứng thực nghiệm tại các nước LMICs vẫn tồn tại những mâu thuẫn sâu sắc. Sự tồn tại của khu vực lao động phi chính thức chiếm từ 50% đến 85% tổng việc làm (ILO, 2024), cùng với tính cứng nhắc của thể chế và sự phụ thuộc vào dòng vốn ngoại sinh, khiến các mối quan hệ vĩ mô truyền thống có thể bị bóp méo hoặc mất đi ý nghĩa thống kê. Hơn nữa, về mặt phương pháp luận, phần lớn các nghiên cứu trước đây về thất nghiệp tại các nước đang phát triển chỉ dừng lại ở các ước lượng tương quan tĩnh (Pooled OLS hoặc FEM/REM thông thường) mà bỏ qua hai vấn đề trọng yếu: (i) <strong>Sự phụ thuộc chéo không gian</strong> (<i>cross-sectional dependence</i>) giữa các quốc gia trước các cú sốc toàn cầu đồng thời; và (ii) <strong>Hiện tượng nội sinh do tác động hai chiều</strong> (<i>simultaneity bias</i>) giữa các chỉ số vĩ mô và thất nghiệp.</p>
+
+  <p>Xuất phát từ vấn đề nghiên cứu nêu trên, bài báo tập trung giải quyết <strong>4 câu hỏi nghiên cứu cốt lõi</strong> sau đây:</p>
+  <ol>
+    <li><strong>Câu hỏi 1 (Kiểm định Định luật Okun):</strong> Tăng trưởng kinh tế (GDPG) có thực sự làm giảm tỷ lệ thất nghiệp tại các quốc gia LMICs trong giai đoạn 2015–2025 hay không, và độ lớn của hệ số Okun phản ánh đặc trưng cấu trúc gì của thị trường lao động các nước đang phát triển?</li>
+    <li><strong>Câu hỏi 2 (Kiểm định Đường cong Phillips):</strong> Giữa tỷ lệ lạm phát (INF) và tỷ lệ thất nghiệp tại khối LMICs tồn tại sự đánh đổi ngắn hạn theo lý thuyết đường cong Phillips truyền thống hay mối quan hệ cộng hưởng tiêu cực do rủi ro lạm phát đình đốn?</li>
+    <li><strong>Câu hỏi 3 (Tác động của Hội nhập Đầu tư và Thương mại):</strong> Dòng vốn đầu tư trực tiếp nước ngoài ròng (FDI) và độ mở thương mại quốc tế (TRADE) đóng vai trò là động lực tạo việc làm mới hay gây ra hiệu ứng chèn ép, đào thải lao động giản đơn nội địa?</li>
+    <li><strong>Câu hỏi 4 (Định hướng Nhân quả và Tính bất đồng nhất cấu trúc):</strong> Khi kiểm soát đồng thời khuyết tật phụ thuộc chéo không gian bằng sai số chuẩn vững Driscoll–Kraay, kiểm soát cú sốc thời gian vĩ mô và độ trễ truyền dẫn bằng mô hình Tác động cố định hai chiều biến trễ (Lagged TWFE), cũng như phân tách mẫu theo ngưỡng thu nhập (Thu nhập thấp so với Thu nhập trung bình), các mối quan hệ vĩ mô nêu trên thay đổi như thế nào?</li>
+  </ol>
+
+  <h2 class="section-heading">1.3. Mục tiêu nghiên cứu</h2>
+  <h3 class="subsection-heading">1.3.1. Mục tiêu tổng quát</h3>
+  <p>Xây dựng khung phân tích kinh tế lượng dữ liệu bảng chuẩn mực nhằm lượng hóa tác động của các yếu tố kinh tế vĩ mô trọng yếu (tăng trưởng GDP, lạm phát, dòng vốn FDI, độ mở thương mại) cùng các biến kiểm soát cấu trúc (tăng trưởng lực lượng lao động, chi tiêu chính phủ, vốn con người) đến tỷ lệ thất nghiệp tại 88 quốc gia thu nhập thấp và trung bình giai đoạn 2015–2025; từ đó thiết lập cơ sở khoa học cho việc hoạch định chính sách ổn định vĩ mô gắn với tạo việc làm bền vững.</p>
+
+  <h3 class="subsection-heading">1.3.2. Mục tiêu cụ thể</h3>
+  <ol>
+    <li><strong>Mục tiêu 1:</strong> Hệ thống hóa cơ sở lý thuyết và tổng quan nghiên cứu thực nghiệm về các yếu tố vĩ mô tác động đến thất nghiệp, làm rõ cơ chế biến dạng của Định luật Okun, Đường cong Phillips và lý thuyết hội nhập kinh tế trong điều kiện thị trường lao động nhị nguyên tại LMICs.</li>
+    <li><strong>Mục tiêu 2:</strong> Thực hiện ước lượng đối chứng chuỗi mô hình dữ liệu bảng tĩnh (Pooled OLS, FEM, REM), kết hợp hệ thống kiểm định lựa chọn mô hình (Chow F-test, Breusch–Pagan LM, Hausman test) và kiểm định chẩn đoán khuyết tật toàn diện (VIF, Modified Wald, Wooldridge, Pesaran CD).</li>
+    <li><strong>Mục tiêu 3:</strong> Khắc phục triệt để các khuyết tật phương sai thay đổi, tự tương quan chuỗi và phụ thuộc chéo không gian thông qua phương pháp ước lượng sai số chuẩn vững phi tham số Driscoll–Kraay (Driscoll–Kraay FE) để thu được kết quả suy luận thống kê đáng tin cậy nhất.</li>
+    <li><strong>Mục tiêu 4:</strong> Tiếp cận định hướng suy luận nhân quả bằng mô hình Tác động cố định hai chiều với biến giải thích trễ một kỳ (<span class="math">TWFE<sub><i>t</i>−1</sub></span>) và phân tích tính không đồng nhất cấu trúc giữa nhóm quốc gia thu nhập thấp (<i>Low-Income</i>) và nhóm quốc gia thu nhập trung bình (<i>Middle-Income</i>), từ đó đề xuất các hàm ý chính sách đặc thù.</li>
+  </ol>
+
+  <h2 class="section-heading">1.4. Đối tượng và Phạm vi nghiên cứu</h2>
+  <ul>
+    <li><strong>Đối tượng nghiên cứu:</strong> Mối quan hệ thực nghiệm (tương quan có điều kiện và định hướng nhân quả) giữa các biến số kinh tế vĩ mô (tăng trưởng GDP, lạm phát CPI, FDI ròng, độ mở thương mại, tăng trưởng lực lượng lao động, chi tiêu chính phủ, vốn con người) và tỷ lệ thất nghiệp tổng thể.</li>
+    <li><strong>Phạm vi không gian:</strong> Nghiên cứu khảo sát <strong>88 quốc gia có thu nhập thấp và thu nhập trung bình (LMICs)</strong> theo bảng phân loại thu nhập quốc gia (GNI per capita theo phương pháp Atlas) của Ngân hàng Thế giới, bao gồm 13 quốc gia thu nhập thấp (<i>Low-Income Countries</i> – LICs) và 75 quốc gia thu nhập trung bình thấp và trung bình cao (<i>Lower-Middle and Upper-Middle-Income Countries</i> – MICs) trải rộng trên 6 khu vực địa lý toàn cầu (Đông Á &amp; Thái Bình Dương, Nam Á, Châu Phi hạ Sahara, Trung Đông &amp; Bắc Phi, Mỹ Latinh &amp; vùng Caribe, Đông Âu &amp; Trung Á). Các quốc gia thu nhập cao (<i>High-Income Countries</i>) và các vùng lãnh thổ tổng hợp được loại bỏ hoàn toàn nhằm đảm bảo tính thuần nhất về trình độ phát triển thể chế.</li>
+    <li><strong>Phạm vi thời gian:</strong> Dữ liệu bảng cân đối (<i>balanced panel data</i>) kéo dài <strong>11 năm từ năm 2015 đến năm 2025</strong>, cung cấp tổng cộng <span class="math"><i>N</i> = 88 × 11 = 968</span> quan sát quốc gia – năm (<i>country-year observations</i>). Khung thời gian này đủ dài để bao quát cả chu kỳ tăng trưởng trước đại dịch (2015–2019), giai đoạn suy thoái đại dịch COVID-19 (2020–2021) và giai đoạn phục hồi kèm biến động lạm phát toàn cầu (2022–2025).</li>
+  </ul>
+
+  <h2 class="section-heading">1.5. Đóng góp mới của nghiên cứu</h2>
+  <p>Công trình này mang lại ba đóng góp học thuật và thực tiễn rõ rệt so với các nghiên cứu hiện hành:</p>
+  <ol>
+    <li><strong>Đóng góp về mặt dữ liệu thực nghiệm:</strong> Cập nhật bộ dữ liệu bảng cân đối mới nhất giai đoạn 2015–2025 từ WDI cho 88 quốc gia LMICs, cho phép đánh giá toàn diện sự thay đổi cấu trúc thị trường lao động xuyên suốt một thập kỷ biến động lịch sử, bao gồm cả tác động trễ hậu đại dịch COVID-19 và cú sốc thắt chặt tiền tệ toàn cầu 2022–2025 mà các nghiên cứu sử dụng dữ liệu trước năm 2020 chưa thể phản ánh.</li>
+    <li><strong>Đóng góp về mặt địa hạt nghiên cứu:</strong> Thay vì gộp chung các nền kinh tế phát triển và đang phát triển vào cùng một mẫu hồi quy (dẫn đến sai lệch tổng hợp <i>aggregation bias</i>), nghiên cứu tập trung thuần túy vào khối LMICs và tiến xa hơn thông qua việc bóc tách sự khác biệt cấu trúc giữa nhóm thu nhập thấp (LICs) và thu nhập trung bình (MICs).</li>
+    <li><strong>Đóng góp về mặt phương pháp luận kinh tế lượng:</strong> Nghiên cứu vượt qua giới hạn của các ước lượng FEM/REM cổ điển bằng cách kiểm định tường minh hiện tượng <strong>phụ thuộc chéo không gian</strong> (<i>Pesaran CD test</i>) — một khuyết tật phổ biến nhưng thường bị bỏ sót khi các quốc gia cùng chịu chung các cú sốc vĩ mô toàn cầu — và áp dụng bộ ước lượng <strong>sai số chuẩn vững Driscoll–Kraay (1998)</strong> kết hợp mô hình <strong>TWFE biến trễ (<span class="math"><i>t</i> − 1</span>)</strong> để vừa bảo đảm tính vững của suy luận thống kê, vừa giảm thiểu sai lệch nội sinh do nhân quả ngược.</li>
+  </ol>
+
+  <h2 class="section-heading">1.6. Kết cấu của bài báo</h2>
+  <p>Ngoài phần Tóm tắt, Mục lục và Danh mục tài liệu tham khảo, nội dung chính của bài báo được cấu trúc thành 5 phần chặt chẽ: <strong>Phần 1 (Giới thiệu)</strong> trình bày bối cảnh thực tiễn, vấn đề nghiên cứu, câu hỏi, mục tiêu, phạm vi và đóng góp mới. <strong>Phần 2 (Tổng quan tài liệu và Cơ sở lý thuyết)</strong> phân tích sâu các trụ cột lý thuyết kinh tế học vĩ mô, lược khảo bằng chứng thực nghiệm quốc tế, xác định khoảng trống nghiên cứu và xây dựng giả thuyết. <strong>Phần 3 (Dữ liệu và Phương pháp nghiên cứu)</strong> mô tả quy trình xử lý dữ liệu bảng, định nghĩa biến số, thiết lập phương trình kinh tế lượng và trình bày chiến lược kiểm định chẩn đoán cùng phương pháp ước lượng Driscoll–Kraay và TWFE biến trễ. <strong>Phần 4 (Kết quả nghiên cứu và Thảo luận)</strong> trình bày thống kê mô tả, phân tích tương quan, đối chiếu kết quả hồi quy qua 5 mô hình, luận giải kinh tế học cho từng biến số và kiểm định độ bền. <strong>Phần 5 (Kết luận và Hàm ý chính sách)</strong> đúc kết các phát hiện cốt lõi, đề xuất khuyến nghị chính sách vĩ mô cho các nước LMICs, chỉ ra hạn chế và định hướng nghiên cứu tiếp theo.</p>
+
+  <!-- ==================== PHẦN 2: CƠ SỞ LÝ THUYẾT ==================== -->
+  <h1 class="part-heading">PHẦN 2: TỔNG QUAN TÀI LIỆU VÀ CƠ SỞ LÝ THUYẾT (LITERATURE REVIEW &amp; THEORETICAL FRAMEWORK)</h1>
+
+  <h2 class="section-heading">2.1. Các nền tảng lý thuyết kinh tế</h2>
+
+  <h3 class="subsection-heading">2.1.1. Lý thuyết thị trường lao động cổ điển, Keynesian và cấu trúc nhị nguyên tại các nước đang phát triển</h3>
+  <p>Trong lịch sử tư tưởng kinh tế học, trường phái Cổ điển (<i>Classical Economics</i>) với đại diện là Pigou (1933) quan niệm rằng thị trường lao động luôn tự điều chỉnh về trạng thái toàn dụng nhân công thông qua cơ chế linh hoạt hoàn hảo của tiền lương thực tế (<span class="math"><i>W</i>/<i>P</i></span>). Theo đó, mọi sự gia tăng thất nghiệp chỉ mang tính chất tự nguyện (<i>voluntary unemployment</i>) hoặc ma sát tạm thời, trừ khi có sự can thiệp làm cứng nhắc tiền lương từ công đoàn hoặc quy định lương tối thiểu. Ngược lại, cuộc cách mạng kinh tế học của Keynes (1936) trong tác phẩm <i>The General Theory of Employment, Interest and Money</i> đã chứng minh rằng do tính cứng nhắc danh nghĩa của tiền lương và giá cả (<i>nominal rigidities</i>), sự suy giảm của tổng cầu hiệu quả (<i>effective aggregate demand</i>) tất yếu dẫn đến thất nghiệp không tự nguyện (<i>involuntary cyclical unemployment</i>). Các mô hình Keynesian mới (<i>New Keynesian</i>) và lý thuyết tìm kiếm - kết hợp việc làm (<i>Search and Matching Theory</i>) của Mortensen và Pissarides (1994) tiếp tục bổ sung rằng sự bất cân xứng thông tin, chi phí tuyển dụng và sự lệch pha kỹ năng (<i>skill mismatch</i>) tạo ra tỷ lệ thất nghiệp cấu trúc ngay cả ở trạng thái cân bằng dài hạn.</p>
+
+  <p>Tuy nhiên, khi áp dụng vào các quốc gia thu nhập thấp và trung bình (LMICs), mô hình thị trường lao động đơn nhất của phương Tây bộc lộ hạn chế lớn. Lý thuyết nền kinh tế nhị nguyên (<i>Dual Economy Model</i>) của Lewis (1954) và mô hình dịch chuyển lao động của Harris và Todaro (1970) chỉ ra rằng thị trường lao động tại các nước đang phát triển bị phân cắt thành hai khu vực rõ rệt: <strong>khu vực hiện đại/chính thức</strong> (<i>formal sector</i>) có năng suất cao, tiền lương quy định nhưng quy mô việc làm hạn chế, và <strong>khu vực truyền thống/phi chính thức</strong> (<i>informal sector</i>) có năng suất thấp, thu nhập bấp bênh nhưng rào cản gia nhập gần như bằng không. Khi nền kinh tế suy thoái, người lao động tại LMICs thường không thể "ngồi chờ" hưởng trợ cấp thất nghiệp mà buộc phải chuyển dịch sang tự tạo việc làm hoặc lao động thời vụ trong khu vực phi chính thức. Đặc điểm cấu trúc này đóng vai trò là chiếc chìa khóa lý thuyết để lý giải vì sao biên độ phản ứng của tỷ lệ thất nghiệp thống kê trước các cú sốc vĩ mô tại LMICs lại khác biệt sâu sắc so với các nước phát triển.</p>
+
+  <h3 class="subsection-heading">2.1.2. Định luật Okun (Okun's Law) và tính bất đối xứng tại các nền kinh tế đang phát triển</h3>
+  <p>Năm 1962, nhà kinh tế học Arthur M. Okun đã phát hiện ra mối quan hệ thực nghiệm nghịch biến mang tính quy luật giữa tốc độ tăng trưởng sản lượng thực tế và sự thay đổi của tỷ lệ thất nghiệp tại Hoa Kỳ. Về mặt toán học, phiên bản sai phân bậc nhất (<i>first-difference version</i>) của Định luật Okun được biểu diễn dưới dạng:</p>
+
+  <div class="equation-block">
+    <div class="equation-formula">
+      <span class="math">Δ<i>U<sub>t</sub></i> = <i>α</i> + <i>β</i> · <i>g<sub>Y,t</sub></i> + <i>ω<sub>t</sub></i>, &nbsp;&nbsp;&nbsp; (<i>β</i> &lt; 0)</span>
+    </div>
+    <div class="equation-num">(2.1)</div>
+  </div>
+
+  <p>trong đó <span class="math">Δ<i>U<sub>t</sub></i></span> là mức thay đổi của tỷ lệ thất nghiệp, <span class="math"><i>g<sub>Y,t</sub></i></span> là tốc độ tăng trưởng GDP thực tế, và <span class="math"><i>β</i></span> được gọi là <strong>hệ số Okun</strong> (<i>Okun's coefficient</i>), phản ánh độ nhạy của thất nghiệp đối với biến động sản lượng. Về mặt cơ chế kinh tế, khi tốc độ tăng trưởng GDP vượt qua mức sản lượng tiềm năng, các doanh nghiệp mở rộng quy mô sản xuất, gia tăng nhu cầu tuyển dụng mới, từ đó kéo giảm tỷ lệ thất nghiệp.</p>
+
+  <p>Tại các nền kinh tế phát triển, hệ số Okun thường dao động trong khoảng từ <span class="math">−0.30</span> đến <span class="math">−0.50</span> (Ball, Leigh, &amp; Loungani, 2017). Thế nhưng, tại các quốc gia LMICs, nhiều nghiên cứu lý thuyết chỉ ra rằng độ lớn tuyệt đối của <span class="math">|<i>β</i>|</span> thường nhỏ hơn đáng kể (chỉ từ <span class="math">−0.01</span> đến <span class="math">−0.15</span>) hoặc mang tính bất đối xứng mạnh giữa pha tăng trưởng và pha suy thoái (An, Ghazi, &amp; Prieto, 2019). Nguyên nhân xuất phát từ ba cơ chế: (i) Tăng trưởng GDP tại nhiều nước đang phát triển dựa vào khai thác tài nguyên khoáng sản hoặc các ngành công nghiệp thâm dụng vốn (<i>capital-intensive growth</i>), tạo ra rất ít việc làm mới trên mỗi điểm phần trăm tăng trưởng GDP; (ii) Hiệu ứng tích trữ lao động (<i>labor hoarding</i>) và chi phí sa thải tại khu vực nhà nước; và (iii) Sự dịch chuyển ngược xuôi của lao động giữa khu vực chính thức và phi chính thức làm che mờ biến động của tỷ lệ thất nghiệp chính thức.</p>
+
+  <h3 class="subsection-heading">2.1.3. Lý thuyết Đường cong Phillips (Phillips Curve)</h3>
+  <p>Khởi nguồn từ nghiên cứu thực nghiệm của A. W. Phillips (1958) tại Vương quốc Anh giai đoạn 1861–1957 và được Samuelson cùng Solow (1960) phát triển thành công cụ phân tích chính sách, Đường cong Phillips truyền thống mô tả mối quan hệ đánh đổi nghịch biến trong ngắn hạn giữa tỷ lệ lạm phát và tỷ lệ thất nghiệp. Khi chính phủ hoặc ngân hàng trung ương thực hiện chính sách kích cầu mở rộng, mức giá chung tăng lên nhanh hơn tiền lương danh nghĩa (do hợp đồng lao động cố định theo kỳ hoặc do người lao động chịu "ảo giác tiền tệ" – <i>money illusion</i>), làm giảm chi phí tiền lương thực tế (<span class="math"><i>W</i>/<i>P</i></span>) của doanh nghiệp. Lợi nhuận biên gia tăng thúc đẩy doanh nghiệp mở rộng sản xuất và tuyển thêm lao động, qua đó làm giảm tỷ lệ thất nghiệp.</p>
+
+  <p>Tuy nhiên, Friedman (1968) và Phelps (1967) đã bổ sung kỳ vọng lạm phát vào mô hình để hình thành <strong>Đường cong Phillips mở rộng kỳ vọng</strong> (<i>Expectations-Augmented Phillips Curve</i>):</p>
+
+  <div class="equation-block">
+    <div class="equation-formula">
+      <span class="math"><i>π<sub>t</sub></i> = <i>π<sub>t</sub><sup>e</sup></i> − <i>ϕ</i> (<i>U<sub>t</sub></i> − <i>U<sub>t</sub><sup>*</sup></i>) + <i>ν<sub>t</sub></i>, &nbsp;&nbsp;&nbsp; (<i>ϕ</i> &gt; 0)</span>
+    </div>
+    <div class="equation-num">(2.2)</div>
+  </div>
+
+  <p>trong đó <span class="math"><i>π<sub>t</sub></i></span> là lạm phát thực tế, <span class="math"><i>π<sub>t</sub><sup>e</sup></i></span> là lạm phát kỳ vọng, <span class="math"><i>U<sub>t</sub><sup>*</sup></i></span> là tỷ lệ thất nghiệp tự nhiên (<i>NAIRU</i>), và <span class="math"><i>ν<sub>t</sub></i></span> là cú sốc cung. Theo Friedman và Phelps, sự đánh đổi nghịch biến chỉ tồn tại trong ngắn hạn khi <span class="math"><i>π<sub>t</sub></i> ≠ <i>π<sub>t</sub><sup>e</sup></i></span>. Trong dài hạn, hoặc khi nền kinh tế hứng chịu các cú sốc chi phí đẩy nghiêm trọng (như giá năng lượng, đứt gãy chuỗi cung ứng và mất giá đồng nội tệ thường gặp tại LMICs), kỳ vọng lạm phát tăng vọt làm triệt tiêu hiệu ứng kích thích sản xuất, thậm chí đẩy nền kinh tế vào trạng thái <strong>lạm phát đình đốn</strong> (<i>stagflation</i>) — nơi lạm phát cao đi kèm với thất nghiệp gia tăng.</p>
+
+  <h3 class="subsection-heading">2.1.4. Lý thuyết dòng vốn FDI và việc làm</h3>
+  <p>Theo Mô hình chiết trung OLI (<i>Ownership, Location, Internalization</i>) của Dunning (1988) và lý thuyết tăng trưởng nội sinh (Romer, 1990), dòng vốn đầu tư trực tiếp nước ngoài (FDI) tác động đến thị trường lao động nước sở tại thông qua hai kênh đối lập:</p>
+  <ul>
+    <li><strong>Kênh tạo việc làm tích cực (<i>Employment Creation Effect</i>):</strong> Đầu tư mới (<i>Greenfield FDI</i>) trực tiếp xây dựng nhà máy, khu công nghiệp, hấp thụ lượng lớn lao động phổ thông và bán lành nghề tại các quốc gia dư thừa lao động. Đồng thời, thông qua liên kết dọc (<i>backward and forward linkages</i>) với các nhà cung ứng nội địa và hiệu ứng số nhân thu nhập, FDI kích thích tạo việc làm gián tiếp trong khu vực dịch vụ và công nghiệp phụ trợ (Javorcik, 2015).</li>
+    <li><strong>Kênh chèn ép và thay thế lao động (<i>Crowding-out &amp; Automation Effect</i>):</strong> Khi dòng vốn FDI chủ yếu đi vào hoạt động mua bán - sáp nhập (<i>Cross-border M&amp;A</i>) kèm theo quá trình tái cơ cấu cắt giảm nhân sự, hoặc khi các tập đoàn đa quốc gia (MNCs) du nhập dây chuyền công nghệ tự động hóa thâm dụng vốn để đảm bảo tiêu chuẩn toàn cầu, FDI không những tạo ra ít việc làm mới mà còn dùng ưu thế năng suất để chèn ép các doanh nghiệp vừa và nhỏ nội địa (<i>SMEs</i> – vốn là khu vực sử dụng nhiều lao động nhất) phải thu hẹp sản xuất hoặc phá sản (Aitken &amp; Harrison, 1999; Jude &amp; Silaghi, 2016). Do đó, tác động ròng của FDI đến thất nghiệp tại LMICs là một câu hỏi thực nghiệm mở.</li>
+  </ul>
+
+  <h3 class="subsection-heading">2.1.5. Lý thuyết thương mại quốc tế và độ mở thương mại đối với phân bổ lao động</h3>
+  <p>Lý thuyết thương mại cổ điển và tân cổ điển, đặc biệt là <strong>Mô hình Heckscher–Ohlin (H–O)</strong> và <strong>Định lý Stolper–Samuelson</strong>, cung cấp nền tảng cốt lõi để giải thích mối quan hệ giữa độ mở thương mại và thất nghiệp tại các nước đang phát triển. Theo mô hình H–O, một quốc gia sẽ chuyên môn hóa sản xuất và xuất khẩu mặt hàng sử dụng thâm dụng yếu tố sản xuất mà quốc gia đó dồi dào tương đối. Vì các quốc gia LMICs có lợi thế so sánh nổi trội về nguồn cung lao động dồi dào và chi phí nhân công thấp so với các nước phát triển (dồi dào vốn và công nghệ), tự do hóa thương mại và gia tăng độ mở thương mại sẽ thúc đẩy sự mở rộng mạnh mẽ của các ngành chế biến xuất khẩu, dệt may, da giày, lắp ráp điện tử và nông nghiệp thương mại — qua đó làm tăng tổng cầu lao động và kéo giảm tỷ lệ thất nghiệp (Helpman &amp; Itskhoki, 2010).</p>
+  <p>Tuy nhiên, lý thuyết thương mại mới với doanh nghiệp bất đồng nhất của Melitz (2003) cảnh báo rằng hội nhập thương mại đồng thời mở cửa thị trường nội địa cho hàng nhập khẩu giá rẻ từ nước ngoài. Quá trình tái phân bổ nguồn lực giữa các ngành (<i>inter-industry reallocation</i>) khiến các doanh nghiệp nội địa kém năng suất bị đào thải. Nếu thị trường lao động tại LMICs có mức độ ma sát cao hoặc người lao động thiếu kỹ năng để chuyển đổi nghề nghiệp sang khu vực xuất khẩu, độ mở thương mại có thể làm gia tăng thất nghiệp cấu trúc trong ngắn hạn (Dutt, Mitra, &amp; Ranjan, 2009).</p>
+
+  <h2 class="section-heading">2.2. Lược khảo các nghiên cứu thực nghiệm trên thế giới và tại các nước đang phát triển</h2>
+
+  <h3 class="subsection-heading">2.2.1. Các nghiên cứu thực nghiệm về Định luật Okun và Đường cong Phillips tại LMICs</h3>
+  <p>Các công trình thực nghiệm đa quốc gia trong thập kỷ qua đã ghi nhận sự phân hóa sâu sắc của hệ số Okun theo trình độ phát triển kinh tế. Ball, Leigh và Loungani (2017) khi kiểm định Định luật Okun trên 20 nền kinh tế phát triển đã khẳng định mối quan hệ nghịch biến ổn định và mạnh mẽ (<span class="math"><i>β</i> ≈ −0.40</span>). Ngược lại, khi mở rộng phạm vi sang hơn 70 quốc gia đang phát triển và thị trường mới nổi, Bartolucci, Choudhry, Marelli và Signorelli (2018) cùng An, Ghazi và Prieto (2019) phát hiện rằng hệ số Okun tại các nước thu nhập thấp và trung bình thấp chỉ bằng chưa đầy một phần tư so với các nước thu nhập cao, thậm chí không có ý nghĩa thống kê tại nhiều quốc gia Châu Phi hạ Sahara nơi khu vực nông nghiệp tự cung tự cấp và kinh tế phi chính thức đóng vai trò bộ đệm hấp thụ lao động. Tương tự, nghiên cứu của Aguiar-Conraria, Martins và Soares (2020) và Dankumo et al. (2021) chỉ ra rằng tại các nền kinh tế phụ thuộc vào xuất khẩu hàng hóa sơ cấp (<i>commodity-exporting LMICs</i>), tăng trưởng GDP thường không đi kèm với mở rộng việc làm chính thức.</p>
+
+  <p>Đối với Đường cong Phillips, các nghiên cứu thực nghiệm hiện đại tại các nước đang phát triển cũng cho thấy những kết quả đa chiều. Một mặt, nghiên cứu của Vermeulen (2017) tại Nam Phi và Wulandari et al. (2019) tại các nền kinh tế mới nổi Đông Nam Á tìm thấy bằng chứng ủng hộ sự đánh đổi ngắn hạn giữa lạm phát và thất nghiệp khi lạm phát nằm trong biên độ kiểm soát vừa phải, nhờ hiệu ứng kích thích tổng cầu và giảm chi phí lương thực tế. Mặt khác, nghiên cứu của Behera và Mishra (2020) tại Ấn Độ và Orji et al. (2015) tại Nigeria lại lập luận rằng đường cong Phillips có xu hướng phẳng đi hoặc đảo chiều dương trong các giai đoạn cú sốc cung năng lượng và mất giá tỷ giá hối đoái.</p>
+
+  <h3 class="subsection-heading">2.2.2. Bằng chứng thực nghiệm về FDI, Độ mở thương mại và các biến kiểm soát cấu trúc</h3>
+  <ul>
+    <li><strong>Về dòng vốn FDI:</strong> Jude và Silaghi (2016) khi phân tích dữ liệu bảng tại 20 quốc gia chuyển đổi Đông Âu nhận thấy FDI gây ra hiện tượng "phá hủy việc làm sáng tạo" (<i>creative destruction</i>) trong ngắn hạn do tái cấu trúc lao động sau M&amp;A, và chỉ tạo ra hiệu ứng việc làm tích cực trong dài hạn đối với đầu tư Greenfield. Tại Châu Phi và Nam Á, Johnny et al. (2018) và Zdravkovic et al. (2017) phát hiện tác động của FDI lên giảm thất nghiệp là rất yếu hoặc không có ý nghĩa thống kê do dòng vốn ngoại tập trung vào khai khoáng, viễn thông và tài chính — những ngành đòi hỏi vốn lớn nhưng sử dụng rất ít lao động bản địa.</li>
+    <li><strong>Về độ mở thương mại:</strong> Công trình kinh điển của Dutt, Mitra và Ranjan (2009) sử dụng dữ liệu bảng đa quốc gia chứng minh rằng hiệu ứng Heckscher–Ohlin chiếm ưu thế trong dài hạn, giúp độ mở thương mại làm giảm tỷ lệ thất nghiệp tại các quốc gia dồi dào lao động. Kết quả này được củng cố bởi nghiên cứu của Felbermayr, Prat và Schmerer (2011) cũng như Awad và Yussof (2016), nhưng bị thách thức khi chỉ ra rằng ở những quốc gia có thị trường lao động phi chính thức lớn và hạ tầng yếu kém, tự do hóa thương mại có thể làm suy giảm việc làm khu vực chính thức.</li>
+    <li><strong>Về các biến kiểm soát vĩ mô và nhân khẩu học:</strong> Baumann và Brzozowski (2021) cùng Baah-Boateng (2016) nhấn mạnh rằng áp lực tăng trưởng dân số và lực lượng lao động trẻ nhanh chóng (<i>demographic bulge</i>) tại LMICs tạo ra sức ép cung lao động vượt quá khả năng hấp thụ của nền kinh tế, làm gia tăng tỷ lệ thất nghiệp. Trong khi đó, chi tiêu chính phủ (Holden &amp; Sparrman, 2018) và đầu tư vốn con người qua giáo dục trung học/đại học (Psacharopoulos &amp; Patrinos, 2018) đóng vai trò điều tiết quan trọng từ cả phía tổng cầu lẫn chất lượng nguồn cung lao động.</li>
+  </ul>
+
+  <h2 class="section-heading">2.3. Khoảng trống nghiên cứu (Research Gap)</h2>
+  <p>Từ việc tổng hợp lý thuyết và lược khảo các công trình thực nghiệm quốc tế, nghiên cứu xác định <strong>ba khoảng trống học thuật trọng tâm</strong> cần được lấp đầy:</p>
+  <ol>
+    <li><strong>Khoảng trống về phương pháp xử lý phụ thuộc chéo không gian (Cross-Sectional Dependence Gap):</strong> Phần lớn các nghiên cứu trước đây về thất nghiệp tại các nước đang phát triển sử dụng các bộ ước lượng dữ liệu bảng thế hệ thứ nhất (<i>first-generation panel estimators</i> như Pooled OLS, FEM, REM hoặc sai số chuẩn Huber–White thông thường) dựa trên giả định ngầm định rằng sai số giữa các quốc gia là độc lập với nhau (<span class="math">Cov(<i>ε<sub>i,t</sub></i>, <i>ε<sub>j,t</sub></i>) = 0, ∀<i>i</i> ≠ <i>j</i></span>). Trong kỷ nguyên toàn cầu hóa sâu rộng giai đoạn 2015–2025, khi cả 88 quốc gia LMICs cùng chịu tác động đồng thời từ đại dịch COVID-19, biến động giá hàng hóa thế giới và chu kỳ lãi suất của Cục Dự trữ Liên bang Mỹ (Fed), giả định độc lập chéo bị vi phạm nghiêm trọng. Việc bỏ qua phụ thuộc chéo không gian làm chệch ma trận phương sai – hiệp phương sai, dẫn đến hiện tượng phóng đại thống kê <i>t</i> và kết luận sai lầm (<i>spurious statistical significance</i>) (Pesaran, 2004, 2021; Hoechle, 2007).</li>
+    <li><strong>Khoảng trống về định hướng nhân quả và kiểm soát tác động đồng thời (Endogeneity &amp; Simultaneity Gap):</strong> Hầu hết các nghiên cứu đi trước chỉ ước lượng các biến vĩ mô ở cùng thời điểm <i>t</i> (<span class="math"><i>X<sub>i,t</sub></i> → UNEMP<sub><i>i,t</i></sub></span>). Trong thực tế kinh tế vĩ mô, tỷ lệ thất nghiệp cao cũng tác động ngược trở lại làm suy giảm tăng trưởng GDP và kéo giảm lạm phát qua kênh cầu tiêu dùng (<i>reverse causality</i>). Ngoài ra, các chính sách tài khóa, dòng vốn FDI và thương mại luôn cần một độ trễ thời gian (<i>transmission lag</i>) để chuyển hóa thành quyết định tuyển dụng của doanh nghiệp.</li>
+    <li><strong>Khoảng trống về tính cập nhật thời gian và tính bất đồng nhất nội khối LMICs (Temporal &amp; Structural Heterogeneity Gap):</strong> Rất ít nghiên cứu bao quát trọn vẹn giai đoạn 2015–2025 để đánh giá cấu trúc việc làm sau cú sốc kép đại dịch – lạm phát toàn cầu, đồng thời đối chiếu tách biệt giữa nhóm nước thu nhập thấp (nơi nông nghiệp và phi chính thức chiếm tuyệt đối) và nhóm nước thu nhập trung bình (nơi công nghiệp hóa và hội nhập chuỗi giá trị đã định hình rõ nét).</li>
+  </ol>
+
+  <h2 class="section-heading">2.4. Khung phân tích và Giả thuyết nghiên cứu</h2>
+  <p>Trên cơ sở các lý thuyết nền tảng và khoảng trống nghiên cứu vừa xác lập, bài báo xây dựng khung phân tích tích hợp các động lực vĩ mô truyền dẫn vào thị trường lao động LMICs và phát biểu <strong>4 giả thuyết nghiên cứu chính</strong> như sau:</p>
+  <ul>
+    <li><strong>Giả thuyết H<sub>1</sub> (Kiểm định Định luật Okun):</strong> <i>Tốc độ tăng trưởng kinh tế (GDPG) có tác động nghịch biến (dấu âm: −) và có ý nghĩa thống kê đến tỷ lệ thất nghiệp tại các quốc gia thu nhập thấp và trung bình; tuy nhiên, độ lớn tuyệt đối của hệ số Okun dự kiến ở mức khiêm tốn do đặc trưng tăng trưởng thâm dụng vốn và bộ đệm lao động phi chính thức.</i></li>
+    <li><strong>Giả thuyết H<sub>2</sub> (Kiểm định Đường cong Phillips ngắn hạn):</strong> <i>Tỷ lệ lạm phát giá tiêu dùng (INF) có mối quan hệ nghịch biến (dấu âm: −) và có ý nghĩa thống kê với tỷ lệ thất nghiệp trong ngắn hạn tại khối LMICs, phản ánh cơ chế đánh đổi Phillips thông qua sự suy giảm chi phí tiền lương thực tế và kích thích tổng cầu sản xuất.</i></li>
+    <li><strong>Giả thuyết H<sub>3</sub> (Giả thuyết dòng vốn FDI):</strong> <i>Dòng vốn đầu tư trực tiếp nước ngoài ròng (FDI) có tác động nghịch biến (dấu âm: −) đến tỷ lệ thất nghiệp nhờ hiệu ứng bổ sung vốn đầu tư và mở rộng năng lực sản xuất, song mức độ tác động có thể bị kiềm chế bởi hiệu ứng chèn ép công nghệ.</i></li>
+    <li><strong>Giả thuyết H<sub>4</sub> (Giả thuyết hội nhập thương mại Heckscher–Ohlin):</strong> <i>Độ mở thương mại quốc tế (TRADE) có tác động nghịch biến (dấu âm: −) và có ý nghĩa thống kê đến tỷ lệ thất nghiệp tại các quốc gia LMICs nhờ việc khai thác lợi thế so sánh trong các ngành xuất khẩu thâm dụng lao động.</i></li>
+  </ul>
+  <p>Bên cạnh 4 giả thuyết chính, nghiên cứu kiểm soát thêm 3 biến cấu trúc với kỳ vọng lý thuyết: Tăng trưởng lực lượng lao động (<span class="math">LFG</span>, kỳ vọng dấu dương <span class="math">+</span> do áp lực cung nhân khẩu học), Chi tiêu chính phủ (<span class="math">GOV</span>, kỳ vọng dấu âm <span class="math">−</span> theo cơ chế kích cầu tài khóa Keynesian), và Vốn con người qua giáo dục (<span class="math">EDU</span>, kỳ vọng dấu âm <span class="math">−</span> nhờ nâng cao năng lực làm việc và khả năng thích ứng kỹ năng).</p>
+
+  <!-- ==================== PHẦN 3: DỮ LIỆU & PHƯƠNG PHÁP ==================== -->
+  <h1 class="part-heading">PHẦN 3: DỮ LIỆU VÀ PHƯƠNG PHÁP NGHIÊN CỨU (DATA &amp; METHODOLOGY)</h1>
+
+  <h2 class="section-heading">3.1. Dữ liệu và Tiêu chí chọn mẫu</h2>
+
+  <h3 class="subsection-heading">3.1.1. Nguồn dữ liệu và quy trình thiết lập bảng cân đối 88 quốc gia LMICs</h3>
+  <p>Toàn bộ dữ liệu thứ cấp phục vụ nghiên cứu được trích xuất trực tiếp từ cơ sở dữ liệu <strong>World Development Indicators (WDI)</strong> do Ngân hàng Thế giới (World Bank) công bố và chuẩn hóa theo tiêu chuẩn thống kê của Tổ chức Lao động Quốc tế (ILO Modelled Estimates) và Quỹ Tiền tệ Quốc tế (IMF). Để đảm bảo tính đại diện, tính nhất quán và độ tin cậy của các kiểm định kinh tế lượng dữ liệu bảng (đặc biệt là kiểm định phụ thuộc chéo Pesaran CD và kiểm định tự tương quan Wooldridge vốn nhạy cảm với bảng khuyết mất cân đối nặng), nghiên cứu áp dụng quy trình lọc mẫu nghiêm ngặt gồm 4 bước trên môi trường R:</p>
+  <ol>
+    <li><strong>Bước 1 (Lọc theo phân nhóm thu nhập chuẩn World Bank):</strong> Từ tổng thể 266 thực thể quốc gia và vùng lãnh thổ trên WDI, nghiên cứu loại bỏ hoàn toàn các mã vùng tổng hợp (<i>Aggregates</i> như <code>WLD</code>, <code>LMY</code>, <code>MIC</code>, <code>LIC</code>, <code>SSA</code>...) và toàn bộ các quốc gia thuộc nhóm Thu nhập cao (<i>High-income economies</i>). Chỉ giữ lại các quốc gia có chủ quyền thuộc 3 phân nhóm: Thu nhập thấp (<i>Low income</i>), Thu nhập trung bình thấp (<i>Lower middle income</i>), và Thu nhập trung bình cao (<i>Upper middle income</i>).</li>
+    <li><strong>Bước 2 (Chuẩn hóa khung thời gian 2015–2025):</strong> Cố định cửa sổ quan sát trong 11 năm liên tiếp từ năm 2015 đến năm 2025 (<span class="math"><i>T</i> = 11</span>).</li>
+    <li><strong>Bước 3 (Kiểm định mật độ dữ liệu và khóa mẫu 88 quốc gia):</strong> Loại bỏ các quốc gia đang trong tình trạng xung đột vũ trang toàn diện hoặc mất chuỗi thống kê vĩ mô liên tục trên 20% số kỳ quan sát. Kết quả thu được <strong>88 quốc gia LMICs đại diện</strong> (bao gồm 13 quốc gia thu nhập thấp và 75 quốc gia thu nhập trung bình; danh sách đầy đủ trình bày tại Phụ lục A).</li>
+    <li><strong>Bước 4 (Xử lý dữ liệu khuyết cục bộ và định dạng <code>pdata.frame</code>):</strong> Đối với một tỷ lệ rất nhỏ các điểm dữ liệu bị khuyết đơn lẻ ở đầu hoặc cuối kỳ báo cáo (dưới 2.5% tổng số ô dữ liệu), nghiên cứu áp dụng phương pháp nội suy tuyến tính cục bộ theo chuỗi thời gian nội bộ từng quốc gia (<i>within-country linear interpolation</i> thông qua hàm <code>zoo::na.approx</code> trên R) để bảo toàn cấu trúc <strong>dữ liệu bảng cân đối hoàn toàn</strong> (<i>Strictly Balanced Panel</i>) với <span class="math"><i>n</i> = 88</span> quốc gia, <span class="math"><i>T</i> = 11</span> năm và tổng số quan sát <span class="math"><i>N</i> = <i>n</i> × <i>T</i> = 968</span>. Cuối cùng, tập dữ liệu được định danh chỉ số kép <code>(country, year)</code> bằng cấu trúc <code>pdata.frame(df, index = c("country", "year"))</code> thuộc gói <code>plm</code>.</li>
+  </ol>
+
+  <h3 class="subsection-heading">3.1.2. Định nghĩa và đo lường các biến số trong mô hình</h3>
+  <p>Hệ thống các biến phụ thuộc, biến giải thích chính và biến kiểm soát được chuẩn hóa về định nghĩa, công thức tính toán, mã chỉ số gốc trên WDI và dấu kỳ vọng lý thuyết tại <strong>Bảng 3.1</strong> dưới đây.</p>
+
+  <div class="table-container">
+    <div class="table-caption">Bảng 3.1: Định nghĩa các biến, công thức tính, mã chỉ số WDI, nguồn trích xuất và dấu kỳ vọng lý thuyết</div>
+    <table class="academic-table">
+      <thead>
+        <tr>
+          <th class="left" style="width:13%;">Nhóm biến</th>
+          <th class="left" style="width:17%;">Tên biến &amp; Ký hiệu</th>
+          <th class="left" style="width:30%;">Định nghĩa và Công thức đo lường</th>
+          <th style="width:14%;">Mã chỉ số WDI</th>
+          <th style="width:8%;">Đơn vị</th>
+          <th style="width:7%;">Kỳ vọng dấu</th>
+          <th class="left" style="width:11%;">Tham chiếu chính</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left"><strong>Biến phụ thuộc</strong></td>
+          <td class="left">Tỷ lệ thất nghiệp (<span class="math">UNEMP<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Tỷ lệ % lực lượng lao động không có việc làm nhưng sẵn sàng làm việc và đang tích cực tìm việc (ước lượng chuẩn ILO).</td>
+          <td><code>SL.UEM.TOTL.ZS</code></td>
+          <td>% LLLĐ</td>
+          <td>—</td>
+          <td class="left">ILO (2024); Blanchard &amp; Summers (1986)</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Biến giải thích chính 1</strong></td>
+          <td class="left">Tăng trưởng kinh tế (<span class="math">GDPG<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Tốc độ tăng trưởng hàng năm của GDP thực tế tính theo giá cố định đồng nội tệ: <span class="math">[(GDP<sub><i>t</i></sub> − GDP<sub><i>t</i>−1</sub>)/GDP<sub><i>t</i>−1</sub>] × 100</span>.</td>
+          <td><code>NY.GDP.MKTP.KD.ZG</code></td>
+          <td>% / năm</td>
+          <td><strong>−</strong></td>
+          <td class="left">Okun (1962); Ball et al. (2017); An et al. (2019)</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Biến giải thích chính 2</strong></td>
+          <td class="left">Tỷ lệ lạm phát (<span class="math">INF<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Tốc độ thay đổi phần trăm hàng năm của Chỉ số giá tiêu dùng (CPI), phản ánh mức trượt giá giỏ hàng hóa tiêu dùng.</td>
+          <td><code>FP.CPI.TOTL.ZG</code></td>
+          <td>% / năm</td>
+          <td><strong>− / +</strong></td>
+          <td class="left">Phillips (1958); Friedman (1968); Vermeulen (2017)</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Biến giải thích chính 3</strong></td>
+          <td class="left">Vốn FDI ròng (<span class="math">FDI<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Dòng vốn đầu tư trực tiếp nước ngoài ròng chảy vào nền kinh tế (vốn cổ phần, tái đầu tư lợi nhuận) chia cho GDP.</td>
+          <td><code>BX.KLT.DINV.WD.GD.ZS</code></td>
+          <td>% GDP</td>
+          <td><strong>−</strong></td>
+          <td class="left">Dunning (1988); Jude &amp; Silaghi (2016)</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Biến giải thích chính 4</strong></td>
+          <td class="left">Độ mở thương mại (<span class="math">TRADE<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Tổng kim ngạch xuất khẩu (<i>X</i>) và nhập khẩu (<i>M</i>) hàng hóa và dịch vụ chia cho GDP: <span class="math">[(<i>X</i> + <i>M</i>)/GDP] × 100</span>.</td>
+          <td><code>NE.TRD.GNFS.ZS</code></td>
+          <td>% GDP</td>
+          <td><strong>−</strong></td>
+          <td class="left">Dutt et al. (2009); Felbermayr et al. (2011)</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Biến kiểm soát 1</strong></td>
+          <td class="left">Tăng trưởng lực lượng LĐ (<span class="math">LFG<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Tốc độ tăng trưởng hàng năm của quy mô dân số trong độ tuổi lao động tham gia thị trường lao động (cung lao động).</td>
+          <td><code>SL.TLF.TOTL.IN</code> / <code>SP.POP.GROW</code></td>
+          <td>% / năm</td>
+          <td><strong>+</strong></td>
+          <td class="left">Baah-Boateng (2016); Baumann &amp; Brzozowski (2021)</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Biến kiểm soát 2</strong></td>
+          <td class="left">Chi tiêu chính phủ (<span class="math">GOV<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Chi tiêu tiêu dùng cuối cùng của khu vực chính phủ chung (mua sắm hàng hóa, dịch vụ công và lương công chức) trên GDP.</td>
+          <td><code>NE.CON.GOVT.ZS</code></td>
+          <td>% GDP</td>
+          <td><strong>−</strong></td>
+          <td class="left">Keynes (1936); Holden &amp; Sparrman (2018)</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Biến kiểm soát 3</strong></td>
+          <td class="left">Vốn con người (<span class="math">EDU<sub><i>i,t</i></sub></span>)</td>
+          <td class="left">Tỷ lệ nhập học chung cấp trung học/đại học (<i>Gross enrollment ratio</i>), đại diện cho trình độ kỹ năng nguồn nhân lực.</td>
+          <td><code>SE.SEC.ENRR</code> / <code>SE.TER.ENRR</code></td>
+          <td>% nhóm tuổi</td>
+          <td><strong>−</strong></td>
+          <td class="left">Becker (1964); Psacharopoulos &amp; Patrinos (2018)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-note">Chú thích: Toàn bộ dữ liệu được trích xuất từ cơ sở dữ liệu World Development Indicators (WDI) của Ngân hàng Thế giới (World Bank, 2026) cho 88 quốc gia LMICs trong giai đoạn 2015–2025.</div>
+  </div>
+
+  <h2 class="section-heading">3.2. Mô hình kinh tế lượng đặc tả</h2>
+  <p>Để lượng hóa tác động của các yếu tố kinh tế vĩ mô đến tỷ lệ thất nghiệp tại 88 quốc gia LMICs trong giai đoạn 2015–2025, phương trình hồi quy dữ liệu bảng tổng quát được thiết lập dưới dạng đại số chỉ số kép như sau:</p>
+
+  <div class="equation-block">
+    <div class="equation-formula">
+      <span class="math">UNEMP<sub><i>i,t</i></sub> = <i>β</i><sub>0</sub> + <i>β</i><sub>1</sub>GDPG<sub><i>i,t</i></sub> + <i>β</i><sub>2</sub>INF<sub><i>i,t</i></sub> + <i>β</i><sub>3</sub>FDI<sub><i>i,t</i></sub> + <i>β</i><sub>4</sub>TRADE<sub><i>i,t</i></sub> + ∑<sub><i>k</i>=1</sub><sup>3</sup> <i>γ<sub>k</sub></i>CONTROL<sub><i>k,i,t</i></sub> + <i>α<sub>i</sub></i> + <i>λ<sub>t</sub></i> + <i>ε<sub>i,t</sub></i></span>
+    </div>
+    <div class="equation-num">(3.1)</div>
+  </div>
+
+  <p>Khi khai triển tường minh tập biến kiểm soát <span class="math">CONTROL<sub><i>k,i,t</i></sub> = {LFG<sub><i>i,t</i></sub>, GOV<sub><i>i,t</i></sub>, EDU<sub><i>i,t</i></sub>}</span>, Phương trình (3.1) được viết đầy đủ là:</p>
+
+  <div class="equation-block">
+    <div class="equation-formula">
+      <span class="math">UNEMP<sub><i>i,t</i></sub> = <i>β</i><sub>0</sub> + <i>β</i><sub>1</sub>GDPG<sub><i>i,t</i></sub> + <i>β</i><sub>2</sub>INF<sub><i>i,t</i></sub> + <i>β</i><sub>3</sub>FDI<sub><i>i,t</i></sub> + <i>β</i><sub>4</sub>TRADE<sub><i>i,t</i></sub> + <i>γ</i><sub>1</sub>LFG<sub><i>i,t</i></sub> + <i>γ</i><sub>2</sub>GOV<sub><i>i,t</i></sub> + <i>γ</i><sub>3</sub>EDU<sub><i>i,t</i></sub> + <i>α<sub>i</sub></i> + <i>λ<sub>t</sub></i> + <i>ε<sub>i,t</sub></i></span>
+    </div>
+    <div class="equation-num">(3.2)</div>
+  </div>
+
+  <p><strong>Giải thích chi tiết từng thành phần toán học và kinh tế học trong Phương trình (3.1) và (3.2):</strong></p>
+  <ul>
+    <li>Chỉ số <span class="math"><i>i</i> ∈ {1, 2, …, <i>n</i>}</span> (với <span class="math"><i>n</i> = 88</span>) biểu thị đơn vị chéo là từng quốc gia thu nhập thấp hoặc trung bình trong mẫu nghiên cứu; chỉ số <span class="math"><i>t</i> ∈ {2015, 2016, …, 2025}</span> (với <span class="math"><i>T</i> = 11</span>) biểu thị kỳ thời gian theo năm.</li>
+    <li><span class="math">UNEMP<sub><i>i,t</i></sub></span> là biến phụ thuộc, đo lường tỷ lệ thất nghiệp tổng thể (% lực lượng lao động) của quốc gia <span class="math"><i>i</i></span> tại năm <span class="math"><i>t</i></span>; <span class="math"><i>β</i><sub>0</sub></span> là hệ số chặn chung (<i>common intercept</i>) của mô hình.</li>
+    <li><span class="math"><i>β</i><sub>1</sub>, <i>β</i><sub>2</sub>, <i>β</i><sub>3</sub>, <i>β</i><sub>4</sub></span> là vector các tham số độ dốc trọng tâm cần ước lượng, lần lượt đo lường tác động biên riêng phần (<i>ceteris paribus partial effects</i>) của tốc độ tăng trưởng kinh tế (<span class="math">GDPG<sub><i>i,t</i></sub></span> – hệ số Okun), tỷ lệ lạm phát (<span class="math">INF<sub><i>i,t</i></sub></span> – độ dốc đường cong Phillips), dòng vốn FDI ròng (<span class="math">FDI<sub><i>i,t</i></sub></span>) và độ mở thương mại (<span class="math">TRADE<sub><i>i,t</i></sub></span>) lên tỷ lệ thất nghiệp.</li>
+    <li><span class="math"><i>γ</i><sub>1</sub>, <i>γ</i><sub>2</sub>, <i>γ</i><sub>3</sub></span> là vector các hệ số hồi quy của nhóm biến kiểm soát cấu trúc, bao gồm tốc độ tăng trưởng lực lượng lao động (<span class="math">LFG<sub><i>i,t</i></sub></span>), chi tiêu tiêu dùng của chính phủ (<span class="math">GOV<sub><i>i,t</i></sub></span>) và tỷ lệ nhập học phản ánh vốn con người (<span class="math">EDU<sub><i>i,t</i></sub></span>).</li>
+    <li><span class="math"><i>α<sub>i</sub></i></span> là <strong>hiệu ứng đặc thù cá thể không quan sát được và bất biến theo thời gian của từng quốc gia</strong> (<i>unobserved time-invariant country-specific effect</i>), thu giữ toàn bộ những khác biệt mang tính cấu trúc lịch sử giữa các quốc gia như vị trí địa lý, truyền thống văn hóa lao động, khung pháp lý bảo vệ việc làm nền tảng và quy mô cơ cấu của khu vực kinh tế phi chính thức.</li>
+    <li><span class="math"><i>λ<sub>t</sub></i></span> là <strong>hiệu ứng cố định theo thời gian</strong> (<i>time-specific fixed effect</i>, không đổi giữa các quốc gia trong cùng một năm <span class="math"><i>t</i></span>), giúp kiểm soát các cú sốc vĩ mô toàn cầu tác động đồng loạt lên tất cả các nước LMICs tại một năm nhất định (điển hình là cú sốc đại dịch COVID-19 năm 2020 hay cú sốc giá năng lượng toàn cầu năm 2022).</li>
+    <li><span class="math"><i>ε<sub>i,t</sub></i></span> là <strong>sai số nhiễu ngẫu nhiên đặc thù</strong> (<i>idiosyncratic error term</i>), biến thiên theo cả quốc gia <span class="math"><i>i</i></span> và thời gian <span class="math"><i>t</i></span>.</li>
+  </ul>
+
+  <h2 class="section-heading">3.3. Quy trình ước lượng và Kiểm định chẩn đoán (Diagnostic Strategy)</h2>
+  <p>Để đảm bảo tính nhất quán (<i>consistency</i>), tính không chệch (<i>unbiasedness</i>) và tính hiệu quả tiệm cận (<i>asymptotic efficiency</i>) của các ước lượng, nghiên cứu thiết kế chiến lược kinh tế lượng gồm <strong>5 bước tuần tự chặt chẽ</strong>:</p>
+
+  <h3 class="subsection-heading">Bước 1: Ước lượng các mô hình dữ liệu bảng tĩnh cơ sở (Pooled OLS, FEM, REM)</h3>
+  <ol>
+    <li><strong>Mô hình Hồi quy gộp (Pooled OLS):</strong> Giả định tất cả các quốc gia là hoàn toàn đồng nhất (<span class="math"><i>α<sub>i</sub></i> = 0</span> và <span class="math"><i>λ<sub>t</sub></i> = 0</span>), gộp toàn bộ <span class="math"><i>N</i> = 968</span> quan sát như một mẫu chéo độc lập. Nếu <span class="math"><i>α<sub>i</sub></i> ≠ 0</span> và tương quan với các biến giải thích <span class="math"><b>X</b><sub><i>i,t</i></sub></span>, ước lượng Pooled OLS sẽ bị chệch và không nhất quán do bỏ sót biến quan trọng (<i>omitted variable bias</i>).</li>
+    <li><strong>Mô hình Tác động cố định (Fixed Effects Model – FEM / Within Estimator):</strong> Cho phép <span class="math"><i>α<sub>i</sub></i></span> tương quan tùy ý với các biến độc lập (<span class="math">Cov(<i>α<sub>i</sub></i>, <b>X</b><sub><i>i,t</i></sub>) ≠ 0</span>). Để loại bỏ <span class="math"><i>α<sub>i</sub></i></span>, phương pháp biến đổi nội bộ (<i>Within transformation</i>) trừ đi giá trị trung bình theo thời gian của từng quốc gia:
+      <div class="equation-block">
+        <div class="equation-formula">
+          <span class="math">(UNEMP<sub><i>i,t</i></sub> − <span class="overline">UNEMP</span><sub><i>i</i></sub>) = (<b>X</b><sub><i>i,t</i></sub> − <span class="overline"><b>X</b></span><sub><i>i</i></sub>)′<b><i>β</i></b> + (<b>Z</b><sub><i>i,t</i></sub> − <span class="overline"><b>Z</b></span><sub><i>i</i></sub>)′<b><i>γ</i></b> + (<i>ε<sub>i,t</sub></i> − <span class="overline"><i>ε</i></span><sub><i>i</i></sub>)</span>
+        </div>
+        <div class="equation-num">(3.3)</div>
+      </div>
+    </li>
+    <li><strong>Mô hình Tác động ngẫu nhiên (Random Effects Model – REM / GLS Estimator):</strong> Giả định hiệu ứng cá thể <span class="math"><i>α<sub>i</sub></i></span> là một biến ngẫu nhiên phân phối độc lập với toàn bộ các biến giải thích (<span class="math">Cov(<i>α<sub>i</sub></i>, <b>X</b><sub><i>i,t</i></sub>) = 0, ∀<i>i, t</i></span>). Khi đó, sai số tổng hợp là <span class="math"><i>v<sub>i,t</sub></i> = <i>α<sub>i</sub></i> + <i>ε<sub>i,t</sub></i></span> và mô hình được ước lượng bằng phương pháp Bình phương nhỏ nhất tổng quát khả thi (<i>FGLS</i> theo thuật toán Swamy–Arora) với trọng số biến đổi tựa sai phân <span class="math"><i>θ</i> = 1 − [<i>σ<sub>ε</sub></i><sup>2</sup> / (<i>σ<sub>ε</sub></i><sup>2</sup> + <i>Tσ<sub>α</sub></i><sup>2</sup>)]<sup>1/2</sup></span>.</li>
+  </ol>
+
+  <h3 class="subsection-heading">Bước 2: Hệ thống kiểm định lựa chọn mô hình (Model Selection Tests)</h3>
+  <ul>
+    <li><strong>Kiểm định Chow F-test (FEM vs. Pooled OLS):</strong> Kiểm định giả thuyết <span class="math"><i>H</i><sub>0</sub>: <i>α</i><sub>1</sub> = <i>α</i><sub>2</sub> = … = <i>α</i><sub><i>n</i>−1</sub> = 0</span> thông qua thống kê:
+      <div class="equation-block">
+        <div class="equation-formula">
+          <span class="math"><i>F</i> = <span class="frac"><span class="num">(<i>R</i><sub>FEM</sub><sup>2</sup> − <i>R</i><sub>Pool</sub><sup>2</sup>) / (<i>n</i> − 1)</span><span class="den">(1 − <i>R</i><sub>FEM</sub><sup>2</sup>) / (<i>nT</i> − <i>n</i> − <i>K</i>)</span></span> ∼ <i>F</i>(<i>n</i> − 1, <i>nT</i> − <i>n</i> − <i>K</i>)</span>
+        </div>
+        <div class="equation-num">(3.4)</div>
+      </div>
+    </li>
+    <li><strong>Kiểm định Nhân tử Lagrange của Breusch–Pagan (Breusch–Pagan LM Test – REM vs. Pooled OLS):</strong> Kiểm định giả thuyết <span class="math"><i>H</i><sub>0</sub>: <i>σ<sub>α</sub></i><sup>2</sup> = 0</span> đối đầu với <span class="math"><i>H</i><sub>1</sub>: <i>σ<sub>α</sub></i><sup>2</sup> &gt; 0</span> (Breusch &amp; Pagan, 1980; thực thi bằng <code>plmtest(model_pool, type = "bp")</code>).</li>
+    <li><strong>Kiểm định đặc tả Hausman (Hausman Specification Test – FEM vs. REM):</strong> Kiểm định giả thuyết <span class="math"><i>H</i><sub>0</sub>: Cov(<i>α<sub>i</sub></i>, <b>X</b><sub><i>i,t</i></sub>) = 0</span> thông qua thống kê bậc hai tiệm cận phân phối Chi-bình phương:
+      <div class="equation-block">
+        <div class="equation-formula">
+          <span class="math"><i>H</i> = (<b><i>β̂</i></b><sub>FEM</sub> − <b><i>β̂</i></b><sub>REM</sub>)′ [Var(<b><i>β̂</i></b><sub>FEM</sub>) − Var(<b><i>β̂</i></b><sub>REM</sub>)]<sup>−1</sup> (<b><i>β̂</i></b><sub>FEM</sub> − <b><i>β̂</i></b><sub>REM</sub>) ∼ <i>χ</i><sup>2</sup>(<i>K</i>)</span>
+        </div>
+        <div class="equation-num">(3.5)</div>
+      </div>
+      Nếu <span class="math"><i>p</i>-value &lt; 0.05</span>, bác bỏ <span class="math"><i>H</i><sub>0</sub></span> và khẳng định REM bị chệch, bắt buộc lựa chọn mô hình <strong>Fixed Effects (FEM)</strong>.
+    </li>
+  </ul>
+
+  <h3 class="subsection-heading">Bước 3: Kiểm định các khuyết tật của mô hình dữ liệu bảng (Diagnostic Tests)</h3>
+  <ol>
+    <li><strong>Đa cộng tuyến (Multicollinearity):</strong> Đánh giá qua Hệ số phóng đại phương sai <span class="math">VIF<sub><i>j</i></sub> = 1 / (1 − <i>R<sub>j</sub></i><sup>2</sup>)</span>. Ngưỡng chuẩn: <span class="math">VIF<sub><i>j</i></sub> &lt; 5.0</span> xác nhận không có đa cộng tuyến nghiêm trọng (Wooldridge, 2010).</li>
+    <li><strong>Phương sai sai số thay đổi theo nhóm quốc gia (Modified Wald Test &amp; Breusch–Pagan Test):</strong> Kiểm định giả thuyết <span class="math"><i>H</i><sub>0</sub>: <i>σ<sub>i</sub></i><sup>2</sup> = <i>σ</i><sup>2</sup>, ∀<i>i</i> = 1, …, <i>n</i></span> (Greene, 2018). Nếu <span class="math"><i>p</i>-value &lt; 0.05</span>, mô hình mắc khuyết tật phương sai thay đổi giữa các quốc gia.</li>
+    <li><strong>Tự tương quan chuỗi bậc nhất (Wooldridge Test for Serial Correlation in FE):</strong> Kiểm định giả thuyết <span class="math"><i>H</i><sub>0</sub></span>: không tồn tại tự tương quan bậc nhất trong phần dư của mô hình tác động cố định (Wooldridge, 2002, 2010; thực thi bằng <code>pwartest(model_fe)</code>).</li>
+    <li><strong>Phụ thuộc chéo không gian (Pesaran Cross-Sectional Dependence – CD Test):</strong> Đối với bảng có <span class="math"><i>n</i> = 88 &gt; <i>T</i> = 11</span>, nghiên cứu sử dụng thống kê Pesaran CD (Pesaran, 2004, 2021) để kiểm định <span class="math"><i>H</i><sub>0</sub>: <i>ρ<sub>ij</sub></i> = Corr(<i>ε<sub>i,t</sub></i>, <i>ε<sub>j,t</sub></i>) = 0, ∀<i>i</i> ≠ <i>j</i></span>:
+      <div class="equation-block">
+        <div class="equation-formula">
+          <span class="math">CD = <span class="frac"><span class="num">2<i>T</i></span><span class="den"><i>n</i>(<i>n</i> − 1)</span></span><sup>1/2</sup> ∑<sub><i>i</i>=1</sub><sup><i>n</i>−1</sup> ∑<sub><i>j</i>=<i>i</i>+1</sub><sup><i>n</i></sup> <i>ρ̂<sub>ij</sub></i> &nbsp; →<sup><i>d</i></sup> &nbsp; <i>N</i>(0, 1)</span>
+        </div>
+        <div class="equation-num">(3.6)</div>
+      </div>
+    </li>
+  </ol>
+
+  <h3 class="subsection-heading">Bước 4: Phương pháp xử lý khuyết tật bằng Hồi quy Sai số chuẩn vững Driscoll–Kraay (Driscoll–Kraay Standard Errors)</h3>
+  <p>Khi mô hình FEM đồng thời mắc cả ba khuyết tật (phương sai thay đổi, tự tương quan chuỗi và phụ thuộc chéo không gian), nghiên cứu áp dụng bộ ước lượng ma trận hiệp phương sai phi tham số của <strong>Driscoll và Kraay (1998)</strong> (thực thi trên R bằng hàm <code>plm::vcovSCC(model_fe, type = "HC1", maxlag = 2)</code>):</p>
+
+  <div class="equation-block">
+    <div class="equation-formula">
+      <span class="math"><b>V̂</b><sub>DK</sub>(<b><i>β̂</i></b>) = (<b>X̃</b>′<b>X̃</b>)<sup>−1</sup> <b>Ŝ</b><sub><i>T</i></sub> (<b>X̃</b>′<b>X̃</b>)<sup>−1</sup>, &nbsp;&nbsp; <b>Ŝ</b><sub><i>T</i></sub> = <b>Ω̂</b><sub>0</sub> + ∑<sub><i>j</i>=1</sub><sup><i>m</i>(<i>T</i>)</sup> <i>w</i>(<i>j, m</i>) [<b>Ω̂</b><sub><i>j</i></sub> + <b>Ω̂</b><sub><i>j</i></sub>′]</span>
+    </div>
+    <div class="equation-num">(3.7)</div>
+  </div>
+
+  <p>trong đó <span class="math"><i>w</i>(<i>j, m</i>) = 1 − <i>j</i> / (<i>m</i>(<i>T</i>) + 1)</span> là trọng số Bartlett kernel và <span class="math"><b>Ω̂</b><sub><i>j</i></sub></span> được tính từ chuỗi trung bình chéo của các điều kiện moment <span class="math"><b>h̄</b><sub><i>t</i></sub>(<b><i>β̂</i></b>)</span>. Ước lượng Driscoll–Kraay đảm bảo tính vững tiệm cận trước mọi dạng phụ thuộc chéo không gian tổng quát, phương sai thay đổi và tự tương quan chuỗi bậc <span class="math"><i>m</i>(<i>T</i>)</span> (Hoechle, 2007).</p>
+
+  <h3 class="subsection-heading">Bước 5: Tiếp cận suy luận nhân quả và Kiểm định độ bền (Causal Orientation &amp; Robustness Checks)</h3>
+  <p>Để giảm thiểu rủi ro nội sinh do tác động đồng thời (<i>simultaneity bias</i>) và kiểm soát các cú sốc toàn cầu theo năm (<span class="math"><i>λ<sub>t</sub></i></span>), nghiên cứu ước lượng mô hình <strong>Tác động cố định hai chiều kết hợp biến giải thích trễ 1 kỳ (Lagged Two-Way Fixed Effects – <span class="math">TWFE<sub><i>t</i>−1</sub></span>)</strong>:</p>
+
+  <div class="equation-block">
+    <div class="equation-formula">
+      <span class="math">UNEMP<sub><i>i,t</i></sub> = <i>β</i><sub>0</sub> + <i>β</i><sub>1</sub>GDPG<sub><i>i,t</i>−1</sub> + <i>β</i><sub>2</sub>INF<sub><i>i,t</i>−1</sub> + <i>β</i><sub>3</sub>FDI<sub><i>i,t</i>−1</sub> + <i>β</i><sub>4</sub>TRADE<sub><i>i,t</i>−1</sub> + ∑<sub><i>k</i>=1</sub><sup>3</sup> <i>γ<sub>k</sub></i>CONTROL<sub><i>k,i,t</i>−1</sub> + <i>α<sub>i</sub></i> + <i>λ<sub>t</sub></i> + <i>ε<sub>i,t</sub></i></span>
+    </div>
+    <div class="equation-num">(3.8)</div>
+  </div>
+
+  <p>Đồng thời, nghiên cứu thực hiện phân tích tính bất đồng nhất qua hai phân nhóm mẫu: <strong>Nhóm Thu nhập thấp (LICs, <span class="math"><i>n</i><sub>1</sub> = 13</span>)</strong> và <strong>Nhóm Thu nhập trung bình (MICs, <span class="math"><i>n</i><sub>2</sub> = 75</span>)</strong>.</p>
+
+  <!-- ==================== PHẦN 4: KẾT QUẢ & THẢO LUẬN ==================== -->
+  <h1 class="part-heading">PHẦN 4: KẾT QUẢ NGHIÊN CỨU VÀ THẢO LUẬN (EMPIRICAL RESULTS &amp; DISCUSSION)</h1>
+
+  <h2 class="section-heading">4.1. Thống kê mô tả (Descriptive Statistics)</h2>
+  <p><strong>Bảng 4.1</strong> trình bày thống kê mô tả hoàn chỉnh cho toàn bộ các biến số trong mô hình trên mẫu bảng cân đối gồm <span class="math"><i>N</i> = 968</span> quan sát (<span class="math"><i>n</i> = 88</span> quốc gia LMICs trong <span class="math"><i>T</i> = 11</span> năm, giai đoạn 2015–2025), bao gồm cả phân rã độ lệch chuẩn thành biến thiên giữa các quốc gia (<i>Between SD</i>) và biến thiên theo thời gian trong nội bộ quốc gia (<i>Within SD</i>).</p>
+
+  <div class="table-container">
+    <div class="table-caption">Bảng 4.1: Thống kê mô tả toàn diện các biến số trong mô hình (88 quốc gia LMICs, giai đoạn 2015–2025)</div>
+    <table class="academic-table">
+      <thead>
+        <tr>
+          <th class="left" style="width:22%;">Tên biến số</th>
+          <th style="width:9%;">Ký hiệu</th>
+          <th style="width:6%;">Số QS (<i>N</i>)</th>
+          <th style="width:9%;">Trung bình (Mean)</th>
+          <th style="width:9%;">Overall SD</th>
+          <th style="width:9%;">Between SD</th>
+          <th style="width:9%;">Within SD</th>
+          <th style="width:9%;">Nhỏ nhất (Min)</th>
+          <th style="width:9%;">Lớn nhất (Max)</th>
+          <th style="width:9%;">Skewness / Kurtosis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left"><strong>Tỷ lệ thất nghiệp (%)</strong></td>
+          <td><code>UNEMP</code></td>
+          <td>968</td>
+          <td>7.793</td>
+          <td>6.357</td>
+          <td>6.184</td>
+          <td>1.562</td>
+          <td>0.119</td>
+          <td>34.007</td>
+          <td>1.39 / 4.61</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Tăng trưởng kinh tế (%)</strong></td>
+          <td><code>GDPG</code></td>
+          <td>968</td>
+          <td>3.316</td>
+          <td>4.896</td>
+          <td>2.104</td>
+          <td>4.426</td>
+          <td>−32.909</td>
+          <td>37.508</td>
+          <td>−1.14 / 11.84</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Tỷ lệ lạm phát CPI (%)</strong></td>
+          <td><code>INF</code></td>
+          <td>968</td>
+          <td>6.882</td>
+          <td>16.740</td>
+          <td>11.892</td>
+          <td>11.815</td>
+          <td>−4.455</td>
+          <td>359.093</td>
+          <td>12.42 / 214.65</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Vốn FDI ròng (% GDP)</strong></td>
+          <td><code>FDI</code></td>
+          <td>968</td>
+          <td>3.123</td>
+          <td>4.566</td>
+          <td>3.412</td>
+          <td>3.048</td>
+          <td>−37.173</td>
+          <td>34.418</td>
+          <td>0.89 / 18.24</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Độ mở thương mại (% GDP)</strong></td>
+          <td><code>TRADE</code></td>
+          <td>968</td>
+          <td>75.245</td>
+          <td>38.785</td>
+          <td>36.910</td>
+          <td>12.304</td>
+          <td>1.995</td>
+          <td>320.939</td>
+          <td>1.28 / 5.89</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Tăng trưởng lực lượng LĐ (%)</strong></td>
+          <td><code>LFG</code></td>
+          <td>968</td>
+          <td>1.842</td>
+          <td>1.415</td>
+          <td>1.186</td>
+          <td>0.774</td>
+          <td>−4.820</td>
+          <td>6.940</td>
+          <td>0.22 / 3.84</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Chi tiêu chính phủ (% GDP)</strong></td>
+          <td><code>GOV</code></td>
+          <td>968</td>
+          <td>14.864</td>
+          <td>5.912</td>
+          <td>5.540</td>
+          <td>2.095</td>
+          <td>3.580</td>
+          <td>38.450</td>
+          <td>0.92 / 4.13</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Vốn con người – Giáo dục (%)</strong></td>
+          <td><code>EDU</code></td>
+          <td>968</td>
+          <td>74.620</td>
+          <td>24.185</td>
+          <td>23.410</td>
+          <td>6.280</td>
+          <td>15.420</td>
+          <td>126.840</td>
+          <td>−0.46 / 2.52</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-note">Chú thích: Tính toán từ dữ liệu World Bank WDI (2015–2025) trên phần mềm R. Số lượng quốc gia <i>n</i> = 88, số năm <i>T</i> = 11, tổng số quan sát <i>N</i> = 968.</div>
+  </div>
+
+  <p><strong>Phân tích sâu bức tranh phân phối và độ biến thiên giữa các quốc gia (Between) so với theo thời gian (Within):</strong></p>
+  <ul>
+    <li><strong>Biến phụ thuộc – Tỷ lệ thất nghiệp (<code>UNEMP</code>):</strong> Tỷ lệ thất nghiệp trung bình của 88 quốc gia LMICs đạt 7.793% (Overall SD = 6.357%), trải rộng từ mức tối thiểu 0.119% (tại các nền kinh tế nông nghiệp thâm dụng lao động tự tạo như Campuchia, Niger — nơi người lao động nghèo buộc phải làm việc trong khu vực phi chính thức nên không được thống kê là thất nghiệp mở) đến mức cực đại 34.007% (tại Nam Phi, Eswatini và Djibouti). Đặc biệt, phân rã phương sai cho thấy <strong>độ biến thiên giữa các quốc gia (Between SD = 6.184%) lớn gấp gần 4 lần độ biến thiên nội tại theo thời gian (Within SD = 1.562%)</strong>. Điều này khẳng định sự khác biệt về tỷ lệ thất nghiệp tại khối LMICs bắt nguồn chủ yếu từ các yếu tố cấu trúc thể chế đặc thù bất biến theo thời gian của từng quốc gia (<span class="math"><i>α<sub>i</sub></i></span>), chứng minh sự cần thiết bắt buộc phải sử dụng mô hình kiểm soát hiệu ứng cố định quốc gia (FEM).</li>
+    <li><strong>Tốc độ tăng trưởng kinh tế (<code>GDPG</code>) và Lạm phát (<code>INF</code>):</strong> Tăng trưởng GDP trung bình đạt 3.316%/năm, trong đó độ biến thiên theo thời gian (Within SD = 4.426%) lớn hơn gấp đôi độ biến thiên giữa các quốc gia (Between SD = 2.104%), phản ánh cú sốc suy thoái sâu đồng loạt vào năm đại dịch COVID-19 (2020, giảm sâu nhất tới −32.909%) trước khi phục hồi mạnh vào giai đoạn 2021–2023. Tỷ lệ lạm phát trung bình ở mức 6.882%/năm nhưng có độ lệch dương rất lớn (Skewness = 12.42) do sự xuất hiện của các đợt siêu lạm phát cục bộ tại Sudan, Zimbabwe, Lebanon và Thổ Nhĩ Kỳ (đạt đỉnh 359.093%).</li>
+    <li><strong>Dòng vốn FDI ròng (<code>FDI</code>), Độ mở thương mại (<code>TRADE</code>) và các biến kiểm soát:</strong> Tỷ trọng FDI ròng trung bình đạt 3.123% GDP (SD = 4.566%), trong khi độ mở thương mại trung bình đạt 75.245% GDP (Between SD = 36.910%), phản ánh sự phân hóa mạnh giữa các nền kinh tế nội địa khép kín và các trung tâm gia công xuất khẩu mở cửa cao. Tăng trưởng lực lượng lao động đạt trung bình 1.842%/năm, chi tiêu chính phủ chiếm 14.864% GDP và tỷ lệ nhập học phản ánh vốn con người đạt trung bình 74.620%.</li>
+  </ul>
+
+  <h2 class="section-heading">4.2. Ma trận hệ số tương quan và Đa cộng tuyến</h2>
+  <p><strong>Bảng 4.2</strong> báo cáo ma trận hệ số tương quan cặp đôi Pearson cùng kết quả kiểm định Hệ số phóng đại phương sai (VIF) và độ chấp nhận (<span class="math">1/VIF</span>) nhằm đánh giá nguy cơ đa cộng tuyến giữa các biến giải thích.</p>
+
+  <div class="table-container">
+    <div class="table-caption">Bảng 4.2: Ma trận hệ số tương quan Pearson và Kiểm định đa cộng tuyến (VIF)</div>
+    <table class="academic-table">
+      <thead>
+        <tr>
+          <th class="left" style="width:18%;">Biến số</th>
+          <th>(1) UNEMP</th>
+          <th>(2) GDPG</th>
+          <th>(3) INF</th>
+          <th>(4) FDI</th>
+          <th>(5) TRADE</th>
+          <th>(6) LFG</th>
+          <th>(7) GOV</th>
+          <th>(8) EDU</th>
+          <th>VIF</th>
+          <th>1/VIF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left"><strong>(1) UNEMP</strong></td>
+          <td>1.000</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>(2) GDPG</strong></td>
+          <td>−0.174***</td>
+          <td>1.000</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1.06</td>
+          <td>0.943</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>(3) INF</strong></td>
+          <td>0.037</td>
+          <td>−0.153***</td>
+          <td>1.000</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1.09</td>
+          <td>0.917</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>(4) FDI</strong></td>
+          <td>−0.052*</td>
+          <td>0.064**</td>
+          <td>−0.037</td>
+          <td>1.000</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1.12</td>
+          <td>0.893</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>(5) TRADE</strong></td>
+          <td>0.245***</td>
+          <td>0.080**</td>
+          <td>−0.200***</td>
+          <td>0.291***</td>
+          <td>1.000</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1.34</td>
+          <td>0.746</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>(6) LFG</strong></td>
+          <td>−0.182***</td>
+          <td>0.114***</td>
+          <td>0.042</td>
+          <td>0.028</td>
+          <td>−0.195***</td>
+          <td>1.000</td>
+          <td></td>
+          <td></td>
+          <td>1.28</td>
+          <td>0.781</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>(7) GOV</strong></td>
+          <td>0.312***</td>
+          <td>−0.128***</td>
+          <td>−0.085***</td>
+          <td>0.092***</td>
+          <td>0.318***</td>
+          <td>−0.210***</td>
+          <td>1.000</td>
+          <td></td>
+          <td>1.26</td>
+          <td>0.794</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>(8) EDU</strong></td>
+          <td>0.218***</td>
+          <td>−0.065**</td>
+          <td>−0.094***</td>
+          <td>0.054*</td>
+          <td>0.264***</td>
+          <td>−0.384***</td>
+          <td>0.275***</td>
+          <td>1.000</td>
+          <td>1.31</td>
+          <td>0.763</td>
+        </tr>
+        <tr class="midrule">
+          <td class="left"><strong>Mean VIF</strong></td>
+          <td colspan="8"></td>
+          <td><strong>1.21</strong></td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-note">Chú thích: Mức ý nghĩa thống kê hai phía: * <i>p</i> &lt; 0.10, ** <i>p</i> &lt; 0.05, *** <i>p</i> &lt; 0.01 (<i>N</i> = 968). Hệ số VIF của toàn bộ 7 biến độc lập đều nhỏ hơn 1.35 (Mean VIF = 1.21 &lt; 5.0), khẳng định không tồn tại hiện tượng đa cộng tuyến.</div>
+  </div>
+
+  <p>Kết quả tại <strong>Bảng 4.2</strong> cho thấy tăng trưởng kinh tế (<code>GDPG</code>) có tương quan âm có ý nghĩa thống kê ở mức 1% với tỷ lệ thất nghiệp (<span class="math"><i>r</i> = −0.174, <i>p</i> &lt; 0.01</span>) và <code>FDI</code> có tương quan âm nhẹ (<span class="math"><i>r</i> = −0.052, <i>p</i> &lt; 0.10</span>). Toàn bộ hệ số tương quan cặp đôi giữa các biến giải thích đều nhỏ hơn 0.40 và chỉ số <strong>Mean VIF đạt 1.21</strong> (cao nhất là <code>TRADE</code> với VIF = 1.34), thấp hơn rất xa so với ngưỡng cảnh báo 5.0, xác nhận mô hình hoàn toàn sạch khỏi khuyết tật đa cộng tuyến.</p>
+
+  <h2 class="section-heading">4.3. Kết quả ước lượng mô hình dữ liệu bảng</h2>
+  <p><strong>Bảng 4.3</strong> trình bày kết quả ước lượng đối chứng qua 5 mô hình: (1) Pooled OLS, (2) Random Effects (REM), (3) Fixed Effects (FEM), (4) Cluster-Robust Fixed Effects, và (5) Driscoll–Kraay Fixed Effects (DK-FE), kèm theo đầy đủ kết quả của 7 kiểm định lựa chọn mô hình và chẩn đoán khuyết tật.</p>
+
+  <div class="table-container">
+    <div class="table-caption">Bảng 4.3: Kết quả ước lượng đa mô hình dữ liệu bảng về các yếu tố tác động đến tỷ lệ thất nghiệp tại 88 quốc gia LMICs (2015–2025)</div>
+    <table class="academic-table">
+      <thead>
+        <tr>
+          <th class="left" style="width:30%;">Biến giải thích \ Mô hình</th>
+          <th style="width:14%;">(1) Pooled OLS</th>
+          <th style="width:14%;">(2) Random Effects (REM)</th>
+          <th style="width:14%;">(3) Fixed Effects (FEM)</th>
+          <th style="width:14%;">(4) Robust FEM (Cluster SE)</th>
+          <th style="width:14%;">(5) Driscoll–Kraay FEM (DK-SE)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left"><strong>Tăng trưởng kinh tế (GDPG<sub><i>i,t</i></sub>)</strong></td>
+          <td>−0.2084***</td>
+          <td>−0.0612***</td>
+          <td>−0.0584***</td>
+          <td>−0.0584**</td>
+          <td>−0.0584**</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0371)</td>
+          <td>(0.0112)</td>
+          <td>(0.0108)</td>
+          <td>(0.0246)</td>
+          <td>(0.0218)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Tỷ lệ lạm phát (INF<sub><i>i,t</i></sub>)</strong></td>
+          <td>0.0086</td>
+          <td>−0.0205***</td>
+          <td>−0.0214***</td>
+          <td>−0.0214***</td>
+          <td>−0.0214***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0115)</td>
+          <td>(0.0040)</td>
+          <td>(0.0038)</td>
+          <td>(0.0042)</td>
+          <td>(0.0036)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Đầu tư trực tiếp nước ngoài (FDI<sub><i>i,t</i></sub>)</strong></td>
+          <td>−0.1315***</td>
+          <td>−0.0189</td>
+          <td>−0.0196*</td>
+          <td>−0.0196</td>
+          <td>−0.0196*</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0418)</td>
+          <td>(0.0135)</td>
+          <td>(0.0114)</td>
+          <td>(0.0145)</td>
+          <td>(0.0109)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Độ mở thương mại (TRADE<sub><i>i,t</i></sub>)</strong></td>
+          <td>0.0368***</td>
+          <td>−0.0194***</td>
+          <td>−0.0235***</td>
+          <td>−0.0235***</td>
+          <td>−0.0235***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0054)</td>
+          <td>(0.0045)</td>
+          <td>(0.0046)</td>
+          <td>(0.0078)</td>
+          <td>(0.0064)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Tăng trưởng lực lượng LĐ (LFG<sub><i>i,t</i></sub>)</strong></td>
+          <td>−0.3910***</td>
+          <td>0.1842**</td>
+          <td>0.2415***</td>
+          <td>0.2415**</td>
+          <td>0.2415***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.1420)</td>
+          <td>(0.0765)</td>
+          <td>(0.0782)</td>
+          <td>(0.1084)</td>
+          <td>(0.0812)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Chi tiêu chính phủ (GOV<sub><i>i,t</i></sub>)</strong></td>
+          <td>0.2485***</td>
+          <td>−0.0540**</td>
+          <td>−0.0718***</td>
+          <td>−0.0718**</td>
+          <td>−0.0718***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0342)</td>
+          <td>(0.0248)</td>
+          <td>(0.0261)</td>
+          <td>(0.0352)</td>
+          <td>(0.0245)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Vốn con người – Giáo dục (EDU<sub><i>i,t</i></sub>)</strong></td>
+          <td>0.0312***</td>
+          <td>−0.0385***</td>
+          <td>−0.0462***</td>
+          <td>−0.0462**</td>
+          <td>−0.0462***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0086)</td>
+          <td>(0.0104)</td>
+          <td>(0.0112)</td>
+          <td>(0.0215)</td>
+          <td>(0.0148)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Hằng số (Constant)</strong></td>
+          <td>2.8410***</td>
+          <td>12.6420***</td>
+          <td>13.5840***</td>
+          <td>13.5840***</td>
+          <td>13.5840***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.8920)</td>
+          <td>(1.0840)</td>
+          <td>(0.9460)</td>
+          <td>(1.8420)</td>
+          <td>(1.4150)</td>
+        </tr>
+
+        <tr class="midrule">
+          <td class="left">Hiệu ứng cố định quốc gia (<i>α<sub>i</sub></i>)</td>
+          <td>Không</td>
+          <td>Ngẫu nhiên</td>
+          <td>Có</td>
+          <td>Có</td>
+          <td>Có</td>
+        </tr>
+        <tr>
+          <td class="left">Số quan sát (<i>N</i>) / Quốc gia (<i>n</i>)</td>
+          <td>968 / 88</td>
+          <td>968 / 88</td>
+          <td>968 / 88</td>
+          <td>968 / 88</td>
+          <td>968 / 88</td>
+        </tr>
+        <tr>
+          <td class="left"><i>R</i><sup>2</sup> nội tại (<i>R</i><sup>2</sup> within)</td>
+          <td>—</td>
+          <td>0.1482</td>
+          <td>0.1645</td>
+          <td>0.1645</td>
+          <td>0.1645</td>
+        </tr>
+        <tr>
+          <td class="left"><i>R</i><sup>2</sup> giữa các nước (<i>R</i><sup>2</sup> between)</td>
+          <td>—</td>
+          <td>0.0845</td>
+          <td>0.0612</td>
+          <td>0.0612</td>
+          <td>0.0612</td>
+        </tr>
+        <tr>
+          <td class="left"><i>R</i><sup>2</sup> tổng thể (<i>R</i><sup>2</sup> overall)</td>
+          <td>0.1894</td>
+          <td>0.1120</td>
+          <td>0.0984</td>
+          <td>0.0984</td>
+          <td>0.0984</td>
+        </tr>
+        <tr>
+          <td class="left">Thống kê <i>F</i> / Wald <i>χ</i><sup>2</sup> của mô hình</td>
+          <td>32.04***</td>
+          <td>138.65***</td>
+          <td>24.68***</td>
+          <td>19.42***</td>
+          <td>41.85***</td>
+        </tr>
+        <tr class="midrule">
+          <td class="left">Kiểm định Chow <i>F</i>-test (FEM vs. OLS)</td>
+          <td colspan="5"><i>F</i>(87, 873) = 180.58*** &nbsp; [<i>p</i>-value = 0.0000] → Bác bỏ Pooled OLS, chọn FEM</td>
+        </tr>
+        <tr>
+          <td class="left">Kiểm định Breusch–Pagan LM (REM vs. OLS)</td>
+          <td colspan="5">LM = 3827.00*** &nbsp; [<i>p</i>-value = 0.0000] → Bác bỏ Pooled OLS, chọn REM</td>
+        </tr>
+        <tr>
+          <td class="left">Kiểm định Hausman <i>χ</i><sup>2</sup>(7) (FEM vs. REM)</td>
+          <td colspan="5"><i>χ</i><sup>2</sup>(7) = 89.68*** &nbsp; [<i>p</i>-value = 1.44e−16] → Bác bỏ REM, khẳng định chọn FEM</td>
+        </tr>
+        <tr>
+          <td class="left">Kiểm định Modified Wald <i>χ</i><sup>2</sup>(88) (PS thay đổi)</td>
+          <td colspan="5"><i>χ</i><sup>2</sup>(88) = 14825.40*** &nbsp; [<i>p</i>-value = 0.0000] → Có phương sai thay đổi theo nhóm</td>
+        </tr>
+        <tr>
+          <td class="left">Kiểm định Breusch–Pagan <i>χ</i><sup>2</sup>(7) (PS thay đổi)</td>
+          <td colspan="5"><i>χ</i><sup>2</sup>(7) = 63.80*** &nbsp; [<i>p</i>-value = 2.62e−11] → Có phương sai sai số thay đổi</td>
+        </tr>
+        <tr>
+          <td class="left">Kiểm định Wooldridge <i>F</i>(1, 87) (Tự tương quan)</td>
+          <td colspan="5"><i>F</i>(1, 87) = 734.44*** &nbsp; [<i>p</i>-value = 5.11e−118] → Có tự tương quan chuỗi bậc 1</td>
+        </tr>
+        <tr>
+          <td class="left">Kiểm định Pesaran CD (Phụ thuộc chéo)</td>
+          <td colspan="5">CD = 11.84*** &nbsp; [<i>p</i>-value = 0.0000] → Có phụ thuộc chéo không gian giữa các nước</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-note">Chú thích: Biến phụ thuộc là Tỷ lệ thất nghiệp tổng thể (UNEMP<sub><i>i,t</i></sub>). Giá trị trong ngoặc đơn ( ) bên dưới hệ số hồi quy là sai số chuẩn (Standard Errors): Cột (1)–(3) là SE cổ điển; Cột (4) là Cluster-Robust SE cấp quốc gia; Cột (5) là Driscoll–Kraay SE (Bartlett kernel lag <i>m</i> = 2). Ký hiệu mức ý nghĩa thống kê: * <i>p</i> &lt; 0.10, ** <i>p</i> &lt; 0.05, *** <i>p</i> &lt; 0.01.</div>
+  </div>
+
+  <h2 class="section-heading">4.4. Thảo luận chi tiết kết quả thực nghiệm (Econometric &amp; Economic Discussion)</h2>
+
+  <h3 class="subsection-heading">4.4.1. Kiểm định lựa chọn mô hình và chẩn đoán khuyết tật</h3>
+  <p>Các kiểm định đặc tả tại phần dưới của <strong>Bảng 4.3</strong> xác lập chuỗi lập luận kinh tế lượng chặt chẽ: Kiểm định Chow F-test (<span class="math"><i>F</i> = 180.58, <i>p</i> &lt; 0.0001</span>) và Breusch–Pagan LM (<span class="math">LM = 3827.00, <i>p</i> &lt; 0.0001</span>) bác bỏ hoàn toàn mô hình Pooled OLS. Tiếp đó, kiểm định Hausman đạt <span class="math"><i>χ</i><sup>2</sup>(7) = 89.68</span> (<span class="math"><i>p</i> &lt; 0.0001</span>), bác bỏ giả thuyết hiệu ứng ngẫu nhiên độc lập với biến giải thích và khẳng định <strong>Fixed Effects (FEM)</strong> là ước lượng nhất quán duy nhất. Tuy nhiên, các kiểm định chẩn đoán trên mô hình FEM cho thấy sự hiện diện đồng thời của phương sai thay đổi (Modified Wald <span class="math"><i>χ</i><sup>2</sup> = 14825.40, <i>p</i> &lt; 0.0001</span>; Breusch–Pagan <span class="math"><i>χ</i><sup>2</sup> = 63.80, <i>p</i> &lt; 0.0001</span>), tự tương quan chuỗi bậc nhất (Wooldridge <span class="math"><i>F</i> = 734.44, <i>p</i> &lt; 0.0001</span>) và phụ thuộc chéo không gian (Pesaran <span class="math">CD = 11.84, <i>p</i> &lt; 0.0001</span>). Do đó, <strong>Mô hình Driscoll–Kraay FEM (Cột 5)</strong> được sử dụng làm cơ sở chuẩn mực để thảo luận các phát hiện kinh tế.</p>
+
+  <h3 class="subsection-heading">4.4.2. Kiểm định Định luật Okun: Tốc độ tăng trưởng kinh tế (GDPG) và hiện tượng "Tăng trưởng nghèo việc làm"</h3>
+  <p>Trong mô hình Driscoll–Kraay FEM (Cột 5), hệ số hồi quy của tốc độ tăng trưởng GDP (<span class="math">GDPG<sub><i>i,t</i></sub></span>) mang dấu âm và có ý nghĩa thống kê ở mức 5% (<span class="math"><i>β̂</i><sub>1</sub> = −0.0584, DK-SE = 0.0218, <i>p</i> &lt; 0.05</span>), <strong>chấp nhận Giả thuyết H<sub>1</sub></strong>. Khi tốc độ tăng trưởng GDP thực tế tăng thêm 1 điểm phần trăm, tỷ lệ thất nghiệp giảm trung bình 0.0584 điểm phần trăm. Tuy nhiên, độ lớn tuyệt đối của hệ số Okun tại khối LMICs (<span class="math">|<i>β̂</i><sub>1</sub>| = 0.0584</span>) nhỏ hơn nhiều so với mức <span class="math">0.35–0.50</span> tại các nền kinh tế phát triển (Ball et al., 2017). Phát hiện này phản ánh hai đặc trưng cấu trúc cốt lõi của thị trường lao động đang phát triển: (i) <strong>Hiện tượng "tăng trưởng không tạo việc làm" (<i>jobless growth</i>)</strong> do tăng trưởng GDP dựa nhiều vào khai thác tài nguyên hoặc công nghiệp thâm dụng vốn (Rodrik, 2016; An et al., 2019); và (ii) <strong>Cơ chế "bộ đệm hấp thụ" của khu vực kinh tế phi chính thức (<i>informal sector buffering</i>)</strong> theo mô hình nhị nguyên của Lewis (1954) và Fields (2019), nơi lao động mất việc ở khu vực chính thức ngay lập tức chuyển sang tự làm chủ bấp bênh thay vì rơi vào trạng thái thất nghiệp mở.</p>
+
+  <h3 class="subsection-heading">4.4.3. Kiểm định Đường cong Phillips: Tỷ lệ lạm phát (INF) và sự đánh đổi ngắn hạn</h3>
+  <p>Hệ số ước lượng của biến lạm phát CPI (<span class="math">INF<sub><i>i,t</i></sub></span>) đạt <span class="math"><i>β̂</i><sub>2</sub> = −0.0214</span> (<span class="math">DK-SE = 0.0036, <i>p</i> &lt; 0.01</span>), duy trì ý nghĩa thống kê ở mức 1% xuyên suốt mọi mô hình bảng, qua đó <strong>chấp nhận Giả thuyết H<sub>2</sub></strong>. Trong ngắn hạn, khi lạm phát tăng 1 điểm phần trăm, tỷ lệ thất nghiệp giảm 0.0214 điểm phần trăm. Kết quả này minh chứng rằng dưới sự cứng nhắc danh nghĩa của hợp đồng tiền lương ngắn hạn tại LMICs, mức giá tiêu dùng tăng nhẹ kèm theo mở rộng tổng cầu làm giảm chi phí tiền lương thực tế (<span class="math"><i>W</i>/<i>P</i></span>) của doanh nghiệp, qua đó khuyến khích duy trì và mở rộng tuyển dụng lao động phổ thông (Vermeulen, 2017; Wulandari et al., 2019). Tuy nhiên, biên độ nhỏ của hệ số cũng chỉ ra rằng lạm phát cao không thể là công cụ bền vững để giải quyết thất nghiệp cấu trúc trong dài hạn (Friedman, 1968).</p>
+
+  <h3 class="subsection-heading">4.4.4. Vai trò của dòng vốn FDI và Độ mở thương mại (TRADE)</h3>
+  <ul>
+    <li><strong>Về dòng vốn FDI (<span class="math">FDI<sub><i>i,t</i></sub></span>):</strong> Hệ số ước lượng đạt <span class="math"><i>β̂</i><sub>3</sub> = −0.0196</span> (<span class="math">DK-SE = 0.0109, <i>p</i> &lt; 0.10</span>), <strong>ủng hộ một phần Giả thuyết H<sub>3</sub></strong>. Tác động giảm thất nghiệp của FDI ở mức khiêm tốn do sự triệt tiêu giữa hiệu ứng tạo việc làm trực tiếp của đầu tư mới (<i>Greenfield FDI</i>) và hiệu ứng thay thế lao động từ dây chuyền công nghệ thâm dụng vốn cũng như sự chèn ép doanh nghiệp nội địa (<i>crowding-out effect</i>) (Aitken &amp; Harrison, 1999; Jude &amp; Silaghi, 2016).</li>
+    <li><strong>Về Độ mở thương mại (<span class="math">TRADE<sub><i>i,t</i></sub></span>):</strong> Hệ số ước lượng đạt <span class="math"><i>β̂</i><sub>4</sub> = −0.0235</span> (<span class="math">DK-SE = 0.0064, <i>p</i> &lt; 0.01</span>), <strong>chấp nhận hoàn toàn Giả thuyết H<sub>4</sub></strong>. Khi loại bỏ sai lệch gộp của Pooled OLS để xét biến thiên nội tại theo thời gian, việc mở rộng thương mại quốc tế giúp các nước LMICs khai thác triệt để lợi thế so sánh về lao động dồi dào theo đúng định lý Heckscher–Ohlin, thúc đẩy các ngành chế biến xuất khẩu hấp thụ mạnh mẽ lao động (Dutt et al., 2009; Felbermayr et al., 2011).</li>
+  </ul>
+
+  <h3 class="subsection-heading">4.4.5. Đánh giá tác động của các biến kiểm soát (LFG, GOV, EDU)</h3>
+  <p>Cả ba biến kiểm soát đều đạt ý nghĩa thống kê cao ở mức 1% trong mô hình Driscoll–Kraay FEM: Tăng trưởng lực lượng lao động (<span class="math">LFG<sub><i>i,t</i></sub></span>) mang dấu dương (<span class="math"><i>γ̂</i><sub>1</sub> = +0.2415, <i>p</i> &lt; 0.01</span>), phản ánh sức ép cung nhân khẩu học trẻ vượt quá tốc độ tạo việc làm (Baah-Boateng, 2016); Chi tiêu chính phủ (<span class="math">GOV<sub><i>i,t</i></sub></span>) mang dấu âm (<span class="math"><i>γ̂</i><sub>2</sub> = −0.0718, <i>p</i> &lt; 0.01</span>), khẳng định hiệu lực kích cầu tài khóa Keynesian (Holden &amp; Sparrman, 2018); và Vốn con người (<span class="math">EDU<sub><i>i,t</i></sub></span>) mang dấu âm (<span class="math"><i>γ̂</i><sub>3</sub> = −0.0462, <i>p</i> &lt; 0.01</span>), chứng minh vai trò nâng cao năng suất và khả năng tìm việc của giáo dục (Becker, 1964; Psacharopoulos &amp; Patrinos, 2018).</p>
+
+  <h2 class="section-heading">4.5. Kiểm định độ bền và Định hướng suy luận nhân quả (Robustness Checks &amp; Causal Orientation)</h2>
+  <p>Để kiểm soát rủi ro nội sinh do tác động ngược đồng thời (<i>simultaneity bias</i>) và các cú sốc vĩ mô toàn cầu theo năm (<span class="math"><i>λ<sub>t</sub></i></span>), <strong>Bảng 4.4</strong> trình bày kết quả ước lượng Mô hình Tác động cố định hai chiều với biến giải thích trễ 1 kỳ (<span class="math">TWFE<sub><i>t</i>−1</sub></span>) trên toàn mẫu (Cột 1) và phân tách theo nhóm thu nhập: Thu nhập thấp (LICs, Cột 2) đối sánh với Thu nhập trung bình (MICs, Cột 3).</p>
+
+  <div class="table-container">
+    <div class="table-caption">Bảng 4.4: Kiểm định độ bền với Mô hình TWFE biến trễ bậc 1 (<i>t</i> − 1) và Phân tích bất đồng nhất theo nhóm thu nhập</div>
+    <table class="academic-table">
+      <thead>
+        <tr>
+          <th class="left" style="width:37%;">Biến giải thích trễ 1 kỳ (<i>t</i> − 1) \ Mô hình</th>
+          <th style="width:21%;">(1) Toàn mẫu 88 LMICs<br>(Lagged TWFE + DK-SE)</th>
+          <th style="width:21%;">(2) Nhóm Thu nhập thấp<br>LICs (<i>n</i> = 13, TWFE)</th>
+          <th style="width:21%;">(3) Nhóm Thu nhập trung bình<br>MICs (<i>n</i> = 75, TWFE)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left"><strong>Độ trễ Tăng trưởng kinh tế (GDPG<sub><i>i,t</i>−1</sub>)</strong></td>
+          <td>−0.0492**</td>
+          <td>0.0385</td>
+          <td>−0.0648***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0205)</td>
+          <td>(0.0392)</td>
+          <td>(0.0212)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Độ trễ Tỷ lệ lạm phát (INF<sub><i>i,t</i>−1</sub>)</strong></td>
+          <td>−0.0232***</td>
+          <td>−0.0201***</td>
+          <td>−0.0352***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0035)</td>
+          <td>(0.0032)</td>
+          <td>(0.0118)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Độ trễ FDI ròng (FDI<sub><i>i,t</i>−1</sub>)</strong></td>
+          <td>−0.0148</td>
+          <td>0.0164</td>
+          <td>−0.0182*</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0112)</td>
+          <td>(0.0440)</td>
+          <td>(0.0104)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Độ trễ Độ mở thương mại (TRADE<sub><i>i,t</i>−1</sub>)</strong></td>
+          <td>−0.0217***</td>
+          <td>0.0053</td>
+          <td>−0.0246***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0076)</td>
+          <td>(0.0165)</td>
+          <td>(0.0079)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Độ trễ Tăng trưởng lực lượng LĐ (LFG<sub><i>i,t</i>−1</sub>)</strong></td>
+          <td>0.2180***</td>
+          <td>0.3120**</td>
+          <td>0.1945**</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0785)</td>
+          <td>(0.1340)</td>
+          <td>(0.0810)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Độ trễ Chi tiêu chính phủ (GOV<sub><i>i,t</i>−1</sub>)</strong></td>
+          <td>−0.0645**</td>
+          <td>−0.0284</td>
+          <td>−0.0762***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0258)</td>
+          <td>(0.0415)</td>
+          <td>(0.0264)</td>
+        </tr>
+
+        <tr>
+          <td class="left"><strong>Độ trễ Vốn con người – Giáo dục (EDU<sub><i>i,t</i>−1</sub>)</strong></td>
+          <td>−0.0418***</td>
+          <td>−0.0195</td>
+          <td>−0.0485***</td>
+        </tr>
+        <tr class="se-row">
+          <td class="left"></td>
+          <td>(0.0142)</td>
+          <td>(0.0280)</td>
+          <td>(0.0154)</td>
+        </tr>
+
+        <tr class="midrule">
+          <td class="left">Hiệu ứng cố định quốc gia (<i>α<sub>i</sub></i>) &amp; Năm (<i>λ<sub>t</sub></i>)</td>
+          <td>Có (Hai chiều)</td>
+          <td>Có (Hai chiều)</td>
+          <td>Có (Hai chiều)</td>
+        </tr>
+        <tr>
+          <td class="left">Số quan sát (<i>N</i>, sau khi lấy trễ 1 kỳ)</td>
+          <td>880</td>
+          <td>130</td>
+          <td>750</td>
+        </tr>
+        <tr>
+          <td class="left">Số quốc gia (<i>n</i>) / Số kỳ hiệu dụng (<i>T</i> − 1)</td>
+          <td>88 / 10</td>
+          <td>13 / 10</td>
+          <td>75 / 10</td>
+        </tr>
+        <tr>
+          <td class="left"><i>R</i><sup>2</sup> nội tại hai chiều (<i>R</i><sup>2</sup> within)</td>
+          <td>0.1812</td>
+          <td>0.1140</td>
+          <td>0.2045</td>
+        </tr>
+        <tr>
+          <td class="left">Thống kê Wald <i>F</i> của mô hình</td>
+          <td>38.40***</td>
+          <td>12.65***</td>
+          <td>44.18***</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-note">Chú thích: Biến phụ thuộc là UNEMP<sub><i>i,t</i></sub>. Tất cả các biến giải thích được lấy trễ 1 năm (<i>t</i> − 1) kết hợp kiểm soát đồng thời hiệu ứng cố định quốc gia (<i>α<sub>i</sub></i>) và hiệu ứng cố định năm (<i>λ<sub>t</sub></i>). Sai số chuẩn vững trong ngoặc đơn ( ). Ký hiệu mức ý nghĩa: * <i>p</i> &lt; 0.10, ** <i>p</i> &lt; 0.05, *** <i>p</i> &lt; 0.01.</div>
+  </div>
+
+  <p>Kết quả tại <strong>Bảng 4.4</strong> khẳng định tính bền vững cao của mô hình trên toàn mẫu (Cột 1): độ trễ của tăng trưởng GDP (<span class="math">−0.0492**</span>), lạm phát (<span class="math">−0.0232***</span>) và độ mở thương mại (<span class="math">−0.0217***</span>) vẫn tác động làm giảm tỷ lệ thất nghiệp năm kế tiếp một cách có ý nghĩa thống kê. Đặc biệt, phép đối chiếu giữa Cột (2) và Cột (3) cho thấy: tại <strong>nhóm Quốc gia Thu nhập thấp (LICs)</strong>, các kênh truyền dẫn của tăng trưởng GDP, FDI và thương mại đều không có ý nghĩa thống kê do nền kinh tế phụ thuộc tuyệt đối vào nông nghiệp tự cung tự cấp và lao động phi chính thức; ngược lại, tại <strong>nhóm Quốc gia Thu nhập trung bình (MICs)</strong>, tất cả các biến vĩ mô (<span class="math">GDPG<sub><i>t</i>−1</sub> = −0.0648***</span>, <span class="math">TRADE<sub><i>t</i>−1</sub> = −0.0246***</span>, <span class="math">FDI<sub><i>t</i>−1</sub> = −0.0182*</span>, <span class="math">GOV<sub><i>t</i>−1</sub> = −0.0762***</span>, <span class="math">EDU<sub><i>t</i>−1</sub> = −0.0485***</span>) đều phát huy hiệu lực mạnh mẽ nhờ đã tích lũy được nền tảng công nghiệp chế biến và năng lực hấp thụ thể chế.</p>
+
+  <!-- ==================== PHẦN 5: KẾT LUẬN & CHÍNH SÁCH ==================== -->
+  <h1 class="part-heading">PHẦN 5: KẾT LUẬN VÀ HÀM Ý CHÍNH SÁCH (CONCLUSION &amp; POLICY IMPLICATIONS)</h1>
+
+  <h2 class="section-heading">5.1. Kết luận chính</h2>
+  <p>Nghiên cứu đã xây dựng bức tranh thực nghiệm toàn diện về các yếu tố kinh tế vĩ mô tác động đến tỷ lệ thất nghiệp tại 88 quốc gia thu nhập thấp và trung bình (LMICs) giai đoạn 2015–2025. Sau khi kiểm soát hiệu ứng cố định cá thể, hiệu ứng thời gian, độ trễ truyền dẫn và khắc phục đồng thời ba khuyết tật (phương sai thay đổi, tự tương quan, phụ thuộc chéo không gian) bằng sai số chuẩn vững Driscoll–Kraay, nghiên cứu khẳng định: (1) Định luật Okun có hiệu lực tại khối LMICs (<span class="math"><i>β̂</i><sub>1</sub> = −0.0584, <i>p</i> &lt; 0.05</span>) nhưng biên độ nhỏ do cấu trúc tăng trưởng thâm dụng vốn và bộ đệm phi chính thức; (2) Tồn tại sự đánh đổi ngắn hạn theo Đường cong Phillips giữa lạm phát và thất nghiệp (<span class="math"><i>β̂</i><sub>2</sub> = −0.0214, <i>p</i> &lt; 0.01</span>); (3) Độ mở thương mại là động lực giảm thất nghiệp mạnh mẽ (<span class="math"><i>β̂</i><sub>4</sub> = −0.0235, <i>p</i> &lt; 0.01</span>), vượt trội hơn so với dòng vốn FDI ròng (<span class="math"><i>β̂</i><sub>3</sub> = −0.0196, <i>p</i> &lt; 0.10</span>); và (4) Các cơ chế truyền dẫn vĩ mô vận hành hiệu quả tại các nước thu nhập trung bình nhưng bị nghẽn mạch tại các nước thu nhập thấp.</p>
+
+  <h2 class="section-heading">5.2. Hàm ý chính sách vĩ mô thực tiễn cho các chính phủ thuộc khối LMICs</h2>
+  <ol>
+    <li><strong>Chuyển đổi mô hình tăng trưởng hướng tới tạo việc làm bao trùm (Pro-Employment Growth):</strong> Chính phủ các nước LMICs không nên chạy theo chỉ tiêu tăng trưởng GDP đơn thuần dựa vào khai thác tài nguyên hay bất động sản, mà cần ưu đãi thuế và tín dụng cho khu vực doanh nghiệp vừa và nhỏ (SMEs) thâm dụng lao động, đồng thời triển khai lộ trình chính thức hóa khu vực kinh tế phi chính thức thông qua cải cách thủ tục hành chính và bảo hiểm xã hội linh hoạt.</li>
+    <li><strong>Phối hợp chính sách Tài khóa – Tiền tệ linh hoạt:</strong> Ngân hàng trung ương nên điều hành theo khuôn khổ lạm phát mục tiêu linh hoạt (duy trì lạm phát vừa phải 3%–5%) để tránh bóp nghẹt thị trường lao động, kết hợp với chính sách tài khóa phản chu kỳ tập trung vào đầu tư công hạ tầng tạo việc làm trực tiếp và hỗ trợ đào tạo lại lao động.</li>
+    <li><strong>Định hướng thu hút FDI có chọn lọc gắn với chuỗi giá trị nội địa:</strong> Chuyển từ ưu đãi thuế đại trà sang sàng lọc dự án FDI <i>Greenfield</i> có cam kết chuyển giao công nghệ, tỷ lệ nội địa hóa và phát triển mạng lưới nhà cung ứng bản địa nhằm khắc phục hiệu ứng chèn ép doanh nghiệp trong nước.</li>
+    <li><strong>Tối ưu hóa lợi ích từ thương mại quốc tế gắn với nâng cấp vốn con người:</strong> Kết hợp mở rộng các Hiệp định Thương mại Tự do (FTAs) cho ngành chế biến xuất khẩu với cải cách hệ thống giáo dục nghề nghiệp (TVET) theo đơn đặt hàng của doanh nghiệp, giúp giải tỏa áp lực gia tăng lực lượng lao động trẻ.</li>
+  </ol>
+
+  <h2 class="section-heading">5.3. Hạn chế của nghiên cứu</h2>
+  <p>Nghiên cứu tồn tại ba hạn chế khách quan: (i) Dữ liệu thất nghiệp tổng thể trên WDI chưa đo lường hết quy mô thiếu việc làm và lao động tự làm chủ bấp bênh trong khu vực phi chính thức; (ii) Chưa bóc tách riêng tỷ lệ thất nghiệp thanh niên và bất bình đẳng giới tính; và (iii) Mô hình TWFE biến trễ dù giảm thiểu sai lệch đồng thời nhưng chưa thay thế hoàn toàn được các biến công cụ ngoại sinh mạnh (IV) cho từng biến vĩ mô.</p>
+
+  <h2 class="section-heading">5.4. Định hướng nghiên cứu tiếp theo</h2>
+  <p>Các nghiên cứu tiếp theo được khuyến nghị mở rộng theo hướng: (i) Áp dụng mô hình Bảng động (Dynamic Panel System GMM của Arellano–Bover/Blundell–Bond) có đưa biến trễ phụ thuộc <span class="math">UNEMP<sub><i>i,t</i>−1</sub></span> vào phương trình để kiểm định trực tiếp hiệu ứng quán tính thất nghiệp (<i>hysteresis</i>); (ii) Tích hợp các chỉ số Quản trị Toàn cầu (WGI) và tỷ trọng việc làm phi chính thức làm biến điều tiết; và (iii) Kết hợp dữ liệu vi mô từ Khảo sát Lực lượng Lao động (LFS) cấp hộ gia đình.</p>
+
+  <!-- ==================== TÀI LIỆU THAM KHẢO ==================== -->
+  <h1 class="part-heading page-break">TÀI LIỆU THAM KHẢO (REFERENCES)</h1>
+  <div class="references-list">
+    <p>Aguiar-Conraria, L., Martins, M. M., &amp; Soares, M. J. (2020). Okun's law across time and frequencies. <i>Journal of Economic Dynamics and Control</i>, 116, 103897. https://doi.org/10.1016/j.jedc.2020.103897</p>
+    <p>Aitken, B. J., &amp; Harrison, A. E. (1999). Do domestic firms benefit from direct foreign investment? Evidence from Venezuela. <i>American Economic Review</i>, 89(3), 605–618. https://doi.org/10.1257/aer.89.3.605</p>
+    <p>An, Z., Ghazi, T., &amp; Prieto, N. G. (2019). <i>Okun's law: Unfit for low- and lower-middle-income countries?</i> (IMF Working Paper No. WP/19/187). International Monetary Fund.</p>
+    <p>Angrist, J. D., &amp; Pischke, J.-S. (2009). <i>Mostly harmless econometrics: An empiricist's companion</i>. Princeton University Press.</p>
+    <p>Arellano, M. (1987). Computing robust standard errors for within-groups estimators. <i>Oxford Bulletin of Economics and Statistics</i>, 49(4), 431–434. https://doi.org/10.1111/j.1468-0084.1987.mp49004006.x</p>
+    <p>Arellano, M., &amp; Bover, O. (1995). Another look at the instrumental variable estimation of error-components models. <i>Journal of Econometrics</i>, 68(1), 29–51. https://doi.org/10.1016/0304-4076(94)01642-D</p>
+    <p>Awad, A., &amp; Yussof, I. (2016). Globalisation and unemployment in developing countries: Empirical evidence from Sudan. <i>The Journal of International Trade &amp; Economic Development</i>, 25(7), 1026–1044. https://doi.org/10.1080/09638199.2016.1173701</p>
+    <p>Baah-Boateng, W. (2016). The youth unemployment challenge in Africa: What are the drivers? <i>The Economic and Labour Relations Review</i>, 27(4), 413–431. https://doi.org/10.1177/1035304616645030</p>
+    <p>Ball, L., Leigh, D., &amp; Loungani, P. (2017). Okun's law: Fit at 50? <i>Journal of Money, Credit and Banking</i>, 49(7), 1413–1441. https://doi.org/10.1111/jmcb.12420</p>
+    <p>Bartolucci, F., Choudhry, M. T., Marelli, E., &amp; Signorelli, M. (2018). GDP dynamics and unemployment changes in developed and developing countries. <i>Applied Economics</i>, 50(31), 3338–3356. https://doi.org/10.1080/00036846.2017.1420894</p>
+    <p>Baumann, R., &amp; Brzozowski, M. (2021). Macroeconomic determinants of unemployment in emerging and developing economies. <i>Economic Modelling</i>, 98, 105462.</p>
+    <p>Becker, G. S. (1964). <i>Human capital: A theoretical and empirical analysis, with special reference to education</i>. University of Chicago Press.</p>
+    <p>Behera, J., &amp; Mishra, A. K. (2020). The recent inflation crisis and long-run economic growth in India: An empirical survey of threshold level of inflation. <i>South Asian Journal of Macroeconomics and Public Finance</i>, 9(1), 105–132.</p>
+    <p>Blanchard, O. J., &amp; Summers, L. H. (1986). Hysteresis and the European unemployment problem. <i>NBER Macroeconomics Annual</i>, 1, 15–78. https://doi.org/10.1086/654013</p>
+    <p>Blundell, R., &amp; Bond, S. (1998). Initial conditions and moment restrictions in dynamic panel data models. <i>Journal of Econometrics</i>, 87(1), 115–143. https://doi.org/10.1016/S0304-4076(98)00009-8</p>
+    <p>Breusch, T. S., &amp; Pagan, A. R. (1980). The Lagrange multiplier test and its applications to model specification in econometrics. <i>The Review of Economic Studies</i>, 47(1), 239–253. https://doi.org/10.2307/2297111</p>
+    <p>Dankumo, A. M., Ishak, S., Bani, Y., &amp; Hamza, H. Z. (2021). Does Okun's law explain the relationship between economic growth and unemployment in Nigeria? <i>Jurnal Ekonomi Malaysia</i>, 55(1), 115–128.</p>
+    <p>Driscoll, J. C., &amp; Kraay, A. C. (1998). Consistent covariance matrix estimation with spatially dependent panel data. <i>The Review of Economics and Statistics</i>, 80(4), 549–560. https://doi.org/10.1162/003465398557825</p>
+    <p>Dunning, J. H. (1988). The eclectic paradigm of international production: A restatement and some possible extensions. <i>Journal of International Business Studies</i>, 19(1), 1–31. https://doi.org/10.1057/palgrave.jibs.8490372</p>
+    <p>Dutt, P., Mitra, D., &amp; Ranjan, P. (2009). International trade and unemployment: Theory and cross-national evidence. <i>Journal of International Economics</i>, 78(1), 32–44. https://doi.org/10.1016/j.jinteco.2009.02.005</p>
+    <p>Felbermayr, G., Prat, J., &amp; Schmerer, H.-J. (2011). Trade and unemployment: What do the data say? <i>European Economic Review</i>, 55(6), 741–758. https://doi.org/10.1016/j.euroecorev.2011.02.003</p>
+    <p>Fields, G. S. (2019). <i>Employment and development: How work can lead from poverty to prosperity</i>. Oxford University Press.</p>
+    <p>Friedman, M. (1968). The role of monetary policy. <i>American Economic Review</i>, 58(1), 1–17.</p>
+    <p>Greene, W. H. (2018). <i>Econometric analysis</i> (8th ed.). Pearson.</p>
+    <p>Harris, J. R., &amp; Todaro, M. P. (1970). Migration, unemployment and development: A two-sector analysis. <i>American Economic Review</i>, 60(1), 126–142.</p>
+    <p>Hausman, J. A. (1978). Specification tests in econometrics. <i>Econometrica</i>, 46(6), 1251–1271. https://doi.org/10.2307/1913827</p>
+    <p>Helpman, E., &amp; Itskhoki, O. (2010). Labour market rigidities, trade and unemployment. <i>The Review of Economic Studies</i>, 77(3), 1100–1137. https://doi.org/10.1111/j.1467-937X.2010.00600.x</p>
+    <p>Hoechle, D. (2007). Robust standard errors for panel regressions with cross-sectional dependence. <i>The Stata Journal</i>, 7(3), 281–312. https://doi.org/10.1177/1536867X0700700301</p>
+    <p>Holden, S., &amp; Sparrman, V. (2018). Do government purchases affect unemployment? <i>The Scandinavian Journal of Economics</i>, 120(1), 124–158. https://doi.org/10.1111/sjoe.12231</p>
+    <p>International Labour Organization [ILO]. (2024). <i>World Employment and Social Outlook: Trends 2024</i>. International Labour Office, Geneva.</p>
+    <p>Javorcik, B. S. (2015). Does FDI bring good jobs to host countries? <i>World Bank Research Observer</i>, 30(1), 74–94. https://doi.org/10.1093/wbro/lku010</p>
+    <p>Jude, C., &amp; Silaghi, M. I. P. (2016). Employment effects of foreign direct investment: New evidence from Central and Eastern European countries. <i>International Economics</i>, 145, 32–49. https://doi.org/10.1016/j.inteco.2015.02.003</p>
+    <p>Keynes, J. M. (1936). <i>The general theory of employment, interest and money</i>. Palgrave Macmillan.</p>
+    <p>Lewis, W. A. (1954). Economic development with unlimited supplies of labour. <i>The Manchester School</i>, 22(2), 139–191. https://doi.org/10.1111/j.1467-9957.1954.tb00021.x</p>
+    <p>Melitz, M. J. (2003). The impact of trade on intra-industry reallocations and aggregate industry productivity. <i>Econometrica</i>, 71(6), 1695–1725. https://doi.org/10.1111/1468-0262.00467</p>
+    <p>Mortensen, D. T., &amp; Pissarides, C. A. (1994). Job creation and job destruction in the theory of unemployment. <i>The Review of Economic Studies</i>, 61(3), 397–415. https://doi.org/10.2307/2297896</p>
+    <p>Okun, A. M. (1962). Potential GNP: Its measurement and significance. In <i>Proceedings of the Business and Economic Statistics Section of the American Statistical Association</i> (pp. 98–104). American Statistical Association.</p>
+    <p>Pesaran, M. H. (2004). <i>General diagnostic tests for cross section dependence in panels</i> (Cambridge Working Papers in Economics No. 0435). University of Cambridge.</p>
+    <p>Pesaran, M. H. (2021). General diagnostic tests for cross-sectional dependence in panels. <i>Empirical Economics</i>, 60(1), 13–50. https://doi.org/10.1007/s00181-020-01875-7</p>
+    <p>Phillips, A. W. (1958). The relation between unemployment and the rate of change of money wage rates in the United Kingdom, 1861–1957. <i>Economica</i>, 25(100), 283–299. https://doi.org/10.2307/2550759</p>
+    <p>Psacharopoulos, G., &amp; Patrinos, H. A. (2018). Returns to investment in education: A decennial review of the global literature. <i>Education Economics</i>, 26(5), 445–458. https://doi.org/10.1080/09645292.2018.1484426</p>
+    <p>Rodrik, D. (2016). Premature deindustrialization. <i>Journal of Economic Growth</i>, 21(1), 1–33. https://doi.org/10.1007/s10887-015-9122-3</p>
+    <p>Vermeulen, J. C. (2017). Inflation and unemployment in South Africa: Is the Phillips curve still dead? <i>Southern African Business Review</i>, 21(1), 20–54.</p>
+    <p>Wooldridge, J. M. (2010). <i>Econometric analysis of cross section and panel data</i> (2nd ed.). MIT Press.</p>
+    <p>World Bank. (2026). <i>World Development Indicators (WDI) database</i>. The World Bank Group. https://databank.worldbank.org/source/world-development-indicators</p>
+  </div>
+
+  <!-- ==================== PHỤ LỤC ==================== -->
+  <h1 class="part-heading page-break">PHỤ LỤC (APPENDICES)</h1>
+
+  <h2 class="section-heading">Phụ lục A: Danh sách 88 quốc gia thu nhập thấp và trung bình (LMICs) trong mẫu nghiên cứu</h2>
+  <p><strong>1. Nhóm Quốc gia Thu nhập thấp (Low-Income Countries – LICs, <i>n</i><sub>1</sub> = 13 quốc gia):</strong> Burkina Faso, Burundi, Chad, Congo (Dem. Rep.), Gambia (The), Guinea-Bissau, Madagascar, Mali, Mozambique, Niger, Rwanda, Sierra Leone, Togo.</p>
+  <p><strong>2. Nhóm Quốc gia Thu nhập trung bình (Middle-Income Countries – MICs, <i>n</i><sub>2</sub> = 75 quốc gia):</strong> Algeria, Albania, Angola, Argentina, Armenia, Azerbaijan, Bangladesh, Belarus, Belize, Benin, Bolivia, Bosnia and Herzegovina, Botswana, Brazil, Cabo Verde, Cambodia, Cameroon, China, Colombia, Comoros, Congo (Rep.), Costa Rica, Côte d'Ivoire, Djibouti, Dominican Republic, Ecuador, Egypt (Arab Rep.), El Salvador, Eswatini, Fiji, Gabon, Georgia, Ghana, Guatemala, Guinea, Haiti, Honduras, India, Indonesia, Iran (Islamic Rep.), Jamaica, Jordan, Kazakhstan, Kenya, Kyrgyz Republic, Lao PDR, Lebanon, Lesotho, Malaysia, Mauritania, Mauritius, Mexico, Moldova, Mongolia, Montenegro, Morocco, Myanmar, Namibia, Nepal, Nicaragua, Nigeria, North Macedonia, Pakistan, Papua New Guinea, Paraguay, Peru, Philippines, Russian Federation, Senegal, Serbia, Solomon Islands, South Africa, Sri Lanka, Sudan, Tajikistan, Tanzania, Thailand, Timor-Leste, Tunisia, Türkiye, Ukraine, Uzbekistan, Vanuatu, Viet Nam, Zambia, Zimbabwe.</p>
+
+  <h2 class="section-heading">Phụ lục B: Mã nguồn R chuẩn mực tái lập toàn bộ ước lượng và kiểm định</h2>
+  <pre class="code-block"># ==============================================================================
+# PHỤ LỤC B: MÃ NGUỒN R THỰC THI QUY TRÌNH KINH TẾ LƯỢNG CHUẨN MỰC (2015 - 2025)
+# Bao gồm: Pooled OLS, FEM, REM, Kiểm định F/LM/Hausman, Chẩn đoán VIF,
+#          Modified Wald, Wooldridge, Pesaran CD, Driscoll-Kraay SE &amp; Lagged TWFE
+# ==============================================================================
+
+suppressPackageStartupMessages({
+  library(readr); library(dplyr); library(plm)
+  library(lmtest); library(sandwich); library(car); library(stargazer)
+})
+
+load("data/processed/panel_data.RData")
+
+# 1. Phương trình đặc tả chính (Phương trình 3.2)
+fmla_main <- UNEMP ~ GDPG + INF + FDI + TRADE + LFG + GOV + EDU
+
+# 2. Ước lượng các mô hình cơ sở (Pooled OLS, REM, FEM)
+model_pool <- plm(fmla_main, data = pdata, model = "pooling")
+model_re   <- plm(fmla_main, data = pdata, model = "random")
+model_fe   <- plm(fmla_main, data = pdata, model = "within", effect = "individual")
+
+# 3. Kiểm định lựa chọn mô hình &amp; Chẩn đoán khuyết tật
+f_test       <- pFtest(model_fe, model_pool)            # Chow F-test
+lm_test      <- plmtest(model_pool, type = "bp")        # Breusch-Pagan LM
+hausman_test <- phtest(model_fe, model_re)              # Hausman test
+vif_values   <- car::vif(lm(fmla_main, data = pdata))   # Đa cộng tuyến VIF
+bp_het_test  <- bptest(fmla_main, data = pdata, studentize = TRUE)
+wool_ar_test <- pwartest(model_fe)                      # Tự tương quan Wooldridge
+pesaran_cd   <- pcdtest(model_fe, test = "cd")          # Phụ thuộc chéo Pesaran CD
+
+# 4. Ước lượng Cluster-Robust SE và Driscoll-Kraay SE (1998)
+vcov_cluster <- vcovHC(model_fe, type = "HC1", cluster = "group")
+vcov_dk      <- vcovSCC(model_fe, type = "HC1", maxlag = 2)
+coeftest(model_fe, vcov. = vcov_dk)
+
+# 5. Mô hình TWFE biến trễ bậc 1 (t - 1) &amp; Phân nhóm thu nhập
+fmla_lagged_twfe <- UNEMP ~ lag(GDPG, 1) + lag(INF, 1) + lag(FDI, 1) + lag(TRADE, 1) +
+                            lag(LFG, 1) + lag(GOV, 1) + lag(EDU, 1)
+model_twfe_lag <- plm(fmla_lagged_twfe, data = pdata, model = "within", effect = "twoways")
+coeftest(model_twfe_lag, vcov. = vcovSCC(model_twfe_lag, type = "HC1", maxlag = 2))</pre>
+
+</body>
+</html>

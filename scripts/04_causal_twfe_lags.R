@@ -8,9 +8,9 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
+  library(stats)
+  library(utils)
   library(readr)
-  library(dplyr)
-  library(tidyr)
   library(plm)
   library(lmtest)
   library(sandwich)
@@ -18,22 +18,36 @@ suppressPackageStartupMessages({
 
 source("scripts/utils/export_helpers.R")
 
+# Khai báo biến công thức hồi quy tránh cảnh báo Linter
+Unemployment <- GDP_growth <- Inflation <- FDI <- Trade <- NULL
+Female_LFPR <- Credit_private <- log_GDP_pc <- NULL
+lag_GDP_growth <- lag_Inflation <- lag_FDI <- lag_Trade <- NULL
+lag_Female_LFPR <- lag_Credit_private <- lag_log_GDP_pc <- NULL
+invisible(utils::globalVariables(c(
+  "Unemployment", "GDP_growth", "Inflation", "FDI", "Trade",
+  "Female_LFPR", "Credit_private", "log_GDP_pc",
+  "lag_GDP_growth", "lag_Inflation", "lag_FDI", "lag_Trade",
+  "lag_Female_LFPR", "lag_Credit_private", "lag_log_GDP_pc"
+)))
+
 cat(">>> BẮT ĐẦU ƯỚC LƯỢNG MÔ HÌNH SUY LUẬN NHÂN QUẢ TWFE & BIẾN TRỄ (GIAI ĐOẠN 3) <<<\n")
 
-load("data/processed/panel_data.RData")
+data_env <- new.env()
+load("data/processed/panel_data.RData", envir = data_env)
+pdata <- data_env$pdata
 
 pdata$log_GDP_pc <- log(pdata$GDP_pc)
 
 # 1. Tạo biến trễ 1 kỳ (Lagged Explanatory Variables: X_{i, t-1})
 # Biến trễ giúp giải quyết vấn đề nội sinh do tác động đồng thời (Simultaneity / Reverse Causality)
 # và phản ánh độ trễ truyền dẫn của chính sách kinh tế vĩ mô vào thị trường lao động.
-pdata$lag_GDP_growth     <- lag(pdata$GDP_growth, 1)
-pdata$lag_Inflation      <- lag(pdata$Inflation, 1)
-pdata$lag_FDI            <- lag(pdata$FDI, 1)
-pdata$lag_Trade          <- lag(pdata$Trade, 1)
-pdata$lag_Female_LFPR    <- lag(pdata$Female_LFPR, 1)
-pdata$lag_Credit_private <- lag(pdata$Credit_private, 1)
-pdata$lag_log_GDP_pc     <- lag(pdata$log_GDP_pc, 1)
+pdata$lag_GDP_growth     <- plm::lag(pdata$GDP_growth, 1)
+pdata$lag_Inflation      <- plm::lag(pdata$Inflation, 1)
+pdata$lag_FDI            <- plm::lag(pdata$FDI, 1)
+pdata$lag_Trade          <- plm::lag(pdata$Trade, 1)
+pdata$lag_Female_LFPR    <- plm::lag(pdata$Female_LFPR, 1)
+pdata$lag_Credit_private <- plm::lag(pdata$Credit_private, 1)
+pdata$lag_log_GDP_pc     <- plm::lag(pdata$log_GDP_pc, 1)
 
 # 2. Ước lượng Mô hình FEM 1 chiều (Baseline từ Thành viên B)
 fmla_baseline <- Unemployment ~ GDP_growth + Inflation + FDI + Trade + 
@@ -58,8 +72,8 @@ test_twfe_lagged <- coeftest(model_twfe_lagged, vcov. = se_twfe_lagged)
 print(test_twfe_lagged)
 
 # 6. Lập bảng so sánh đối chiếu quá trình tiến hóa của mô hình
-vars_base <- names(coef(model_fe_base))
-vars_lag  <- names(coef(model_twfe_lagged))
+vars_base <- names(stats::coef(model_fe_base))
+vars_lag  <- names(stats::coef(model_twfe_lagged))
 
 format_coef <- function(model, vcov_mat, var_name) {
   cf <- coeftest(model, vcov. = vcov_mat)

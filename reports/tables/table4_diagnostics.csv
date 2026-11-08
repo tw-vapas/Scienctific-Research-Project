@@ -1,6 +1,6 @@
 Test_Name,Statistic,p_value,Decision
-Chow F-test (FEM vs Pool),180.5774435116088,0,Ưu tiên FEM
-Breusch-Pagan LM (REM vs Pool),3827.000435074413,0,Ưu tiên REM
-Hausman Test (FEM vs REM),89.68475619697341,1.4360989528850216e-16,Khẳng định chọn FEM
-Wooldridge Test (Serial Correlation),734.4433051813766,5.112833662185498e-118,Mắc khuyết tật tự tương quan
-Breusch-Pagan Test (Heteroskedasticity),63.80245101360399,2.6162958753358153e-11,Mắc khuyết tật phương sai thay đổi
+Chow F-test (FEM vs Pool),180.57744351160844,0,Ưu tiên FEM
+Breusch-Pagan LM (REM vs Pool),3827.0004350744225,0,Ưu tiên REM
+Hausman Test (FEM vs REM),89.68475619687118,1.4360989529544298e-16,Khẳng định chọn FEM
+Wooldridge Test (Serial Correlation),734.4433051813805,5.112833662179387e-118,Mắc khuyết tật tự tương quan
+Breusch-Pagan Test (Heteroskedasticity),63.80245101360409,2.616295875335696e-11,Mắc khuyết tật phương sai thay đổi

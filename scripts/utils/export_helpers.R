@@ -4,6 +4,8 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
+  library(stats)
+  library(utils)
   library(lmtest)
   library(sandwich)
 })

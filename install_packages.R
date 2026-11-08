@@ -11,6 +11,7 @@ required_packages <- c(
   "tidyr",
   "stringr",
   "purrr",
+  "zoo",          # Time series & missing value interpolation (na.approx)
   
   # Econometrics & Panel Data Analysis
   "plm",          # Linear models for panel data (Pooled OLS, FEM, REM, TWFE)
@@ -34,13 +35,29 @@ required_packages <- c(
 
 cat("Checking and installing required R packages...\n")
 
-new_packages <- required_packages[!(required_packages %in% installed.packages()[, "Package"])]
+# Ensure user personal library exists and is in .libPaths() (fixes non-interactive install on Windows)
+user_lib <- Sys.getenv("R_LIBS_USER")
+if (nzchar(user_lib)) {
+  if (!dir.exists(user_lib)) {
+    dir.create(user_lib, recursive = TRUE, showWarnings = FALSE)
+  }
+  .libPaths(c(user_lib, .libPaths()))
+}
 
-if (length(new_packages) > 0) {
-  cat("Installing missing packages:\n", paste(new_packages, collapse = ", "), "\n")
-  install.packages(new_packages, repos = "https://cloud.r-project.org")
+# Verify by actually loading each namespace (catches broken/missing sub-dependencies)
+missing_or_broken <- required_packages[!sapply(required_packages, requireNamespace, quietly = TRUE)]
+
+if (length(missing_or_broken) > 0) {
+  cat("Installing missing or broken packages into:", .libPaths()[1], "\n")
+  cat(paste(missing_or_broken, collapse = ", "), "\n")
+  utils::install.packages(
+    missing_or_broken,
+    lib = .libPaths()[1],
+    repos = "https://cloud.r-project.org",
+    dependencies = c("Depends", "Imports", "LinkingTo")
+  )
 } else {
-  cat("All required packages are already installed!\n")
+  cat("All required packages are already installed and verified!\n")
 }
 
 cat("\nPackage verification complete.\n")

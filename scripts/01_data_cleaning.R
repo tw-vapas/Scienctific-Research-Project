@@ -7,12 +7,20 @@
 # ==============================================================================
 
 suppressPackageStartupMessages({
+  library(stats)
+  library(utils)
   library(readr)
   library(dplyr)
   library(tidyr)
   library(plm)
   library(zoo)
 })
+
+# Khai báo biến cột phục vụ Non-Standard Evaluation (NSE) tránh cảnh báo Linter
+country <- income <- region <- year <- valid_core_obs <- total_years <- NULL
+invisible(utils::globalVariables(c(
+  "country", "income", "region", "year", "valid_core_obs", "total_years"
+)))
 
 cat(">>> BẮT ĐẦU QUY TRÌNH LÀM SẠCH DỮ LIỆU BẢNG (GIAI ĐOẠN 1) <<<\n")
 
@@ -46,7 +54,7 @@ country_summary <- df_filtered %>%
   group_by(country, income, region) %>%
   summarise(
     total_years = n_distinct(year),
-    valid_core_obs = sum(complete.cases(across(all_of(core_vars)))),
+    valid_core_obs = sum(stats::complete.cases(across(all_of(core_vars)))),
     .groups = "drop"
   )
 
@@ -67,10 +75,14 @@ df_panel <- df_filtered %>%
   arrange(country, year)
 
 # 5. Kiểm tra và bổ sung nội suy tuyến tính cục bộ nếu có năm khuyết tật nhỏ lẻ
+interpolate_series <- function(x) {
+  if (all(is.na(x))) x else zoo::na.approx(x, na.rm = FALSE, rule = 2)
+}
+
 df_clean <- df_panel %>%
   group_by(country) %>%
   arrange(year) %>%
-  mutate(across(all_of(core_vars), ~ if (all(is.na(.x))) .x else zoo::na.approx(.x, na.rm = FALSE, rule = 2))) %>%
+  mutate(across(all_of(core_vars), interpolate_series)) %>%
   ungroup()
 
 # 6. Thiết lập và kiểm tra cấu trúc Panel Data với gói plm
